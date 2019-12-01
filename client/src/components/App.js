@@ -7,7 +7,9 @@ function App() {
   console.log(users)
 
   return (
+    
     <div>
+      <h1>I hate Him</h1>
       <h1>Jimmy</h1>
       {users.map(user => (
         <p key={user.id}>{user.name}</p>
