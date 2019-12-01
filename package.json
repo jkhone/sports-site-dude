@@ -1,0 +1,31 @@
+{
+  "name": "sports-site-dude",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:client": "cd client && yarn start",
+    "start:server": "cd server && yarn start",
+    "start": "concurrently \"yarn run start:server\" \"yarn run start:client\""
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PC-Fullstack-Fall-2019/boilerplate/issues"
+  },
+  "homepage": "https://github.com/PC-Fullstack-Fall-2019/boilerplate#readme",
+  "dependencies": {
+    "concurrently": "^5.0.0"
+  },
+  "boilerplate": {
+    "name": "boilerplate",
+    "version": "1.0.0",
+    "description": "",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/PC-Fullstack-Fall-2019/boilerplate.git"
+    },
+    "author": "",
+    "license": "ISC"
+  }
+}
