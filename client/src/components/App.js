@@ -8,6 +8,7 @@ function App() {
 
   return (
     <div>
+      <h1>Jimmy</h1>
       {users.map(user => (
         <p key={user.id}>{user.name}</p>
       ))}
