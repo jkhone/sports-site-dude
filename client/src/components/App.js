@@ -1,11 +1,10 @@
 import React from "react"
+import TeamLogos from './TeamLogos'
 
 function App() {
-
-  return (
+  return (    
     <div>
-      <h1>Jimmy</h1>
-
+      <TeamLogos />
     </div>
   )
 }
