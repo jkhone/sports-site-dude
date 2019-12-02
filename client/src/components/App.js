@@ -1,19 +1,10 @@
 import React from "react"
-import { useUsers } from "../hooks"
+import TeamLogos from './TeamLogos'
 
 function App() {
-  const { users } = useUsers()
-
-  console.log(users)
-
-  return (
-    
+  return (    
     <div>
-      <h1>I hate Him</h1>
-      <h1>Jimmy</h1>
-      {users.map(user => (
-        <p key={user.id}>{user.name}</p>
-      ))}
+      <TeamLogos />
     </div>
   )
 }
