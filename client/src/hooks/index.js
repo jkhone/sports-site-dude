@@ -1,0 +1,1 @@
+export { usePlayers } from "../redux/ducks/players"
