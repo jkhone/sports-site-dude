@@ -25,6 +25,11 @@ code {
   width: 100%;
   color: #999;
 }
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
 /* HEADER */
 header{
   display: flex;
@@ -136,4 +141,3 @@ header{
 
 .brandCSS {display: flex;
 justify-content: center;}
-

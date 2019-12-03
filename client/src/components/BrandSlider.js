@@ -18,8 +18,8 @@ export default function() {
             setIndex(i)
         }}
         >
-            {brandImages.map(image => (
-                <div className="brandCSS">
+            {brandImages.map((image, i) => (
+                <div key={"brandslider" + i} className="brandCSS">
                  <a href={image.url1}><GalleryImage className="bImage" objectFit="cover" src={image.img1}/></a>
                  <a href={image.url2}><GalleryImage className="bImage" objectFit="cover" src={image.img2}/></a>
                  <a href={image.url3}><GalleryImage className="bImage" objectFit="cover" src={image.img3}/></a>
@@ -33,6 +33,3 @@ export default function() {
         </Gallery>
     )
 }
-
-const rootElement = document.getElementById("root")
-ReactDom.render(<default/>, rootElement)

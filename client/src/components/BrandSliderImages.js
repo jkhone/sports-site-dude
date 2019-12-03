@@ -1,4 +1,3 @@
-
 export const brandImages = [
     {
     img1: "https://cdn2.bigcommerce.com/server1500/ac84d/products/1269/images/2876/Nike_Logo__97043.1340418202.380.380.jpg?c=2",

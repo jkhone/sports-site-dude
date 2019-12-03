@@ -1,5 +1,4 @@
 import React from "react"
-import ReactDom from "react-dom"
 import {popImages} from "./homesliderimages"
 import {Gallery, GalleryImage} from 'react-gesture-gallery'
 
@@ -21,7 +20,7 @@ export default function() {
     return (
         <Gallery
         style={{
-            width: "100%",
+            
         }}
         index={index}
         enableControls={false}
@@ -30,15 +29,10 @@ export default function() {
             setIndex(i)
         }}
         >
-            {popImages.map(image => (
-                <>
-                 <a href={image.url}><GalleryImage objectFit="cover" src={image.img}/></a>
-                </>
+            {popImages.map((image, i) => (
+                <a key={"homeslider" + i} href={image.url}><GalleryImage objectFit="cover" src={image.img}/></a>
             ))}
         </Gallery>
     )
 }
-
-const rootElement = document.getElementById("root")
-ReactDom.render(<default/>, rootElement)
 

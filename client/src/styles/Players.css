@@ -1,28 +1,17 @@
-html {
-    box-sizing: border-box;
-  }
-  *,
-  *::before,
-  *::after {
-    box-sizing: inherit;
-  }
+#playercontainer {
+    width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    
+}
 
-  #playercontainer {
-      width: 1200px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      
-  }
+#profile img {
+  width: 250px;
+  height: 350px;
 
- /*test  */
+}
 
-  #profile img {
-    width: 250px;
-    height: 350px;
-  
-  }
-
-  #profile li {
-      list-style: none;
-  }
+#profile li {
+    list-style: none;
+}
