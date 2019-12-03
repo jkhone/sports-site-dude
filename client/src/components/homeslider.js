@@ -2,6 +2,7 @@ import React from "react"
 import ReactDom from "react-dom"
 import {popImages} from "./homesliderimages"
 import {Gallery, GalleryImage} from 'react-gesture-gallery'
+import "../styles/MVPSlider.css"
 
 const START_INDEX = 0
 
@@ -20,10 +21,6 @@ export default function() {
    
     return (
         <Gallery
-        style={{
-            height: "600px",
-            width: "600px",
-        }}
         index={index}
         enableControls={false}
         enableIndicators={false}
@@ -33,7 +30,7 @@ export default function() {
         >
             {popImages.map(image => (
                 <>
-                 <a href={image.url}><GalleryImage objectFit="cover" src={image.img}/></a>
+                 <a className="MVPSlider" href={image.url}><GalleryImage objectFit="cover" src={image.img}/></a>
                 </>
             ))}
         </Gallery>

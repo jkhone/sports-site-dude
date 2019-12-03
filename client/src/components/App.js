@@ -36,7 +36,9 @@ function App() {
           </div>
         </div>
       </header>
-
+      <div>
+        <HomeSlider />
+      </div>
       <footer>
         <div className="scoreBar">
 
