@@ -1,17 +1,50 @@
 #playercontainer {
-    width: 1200px;
+    width: 100vh;
     margin: auto;
     display: grid;
+    justify-content: center;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    
 }
 
-#profile img {
+
+.player{
+  margin: 10px;
+  cursor: pointer;
+  /* color: #333; */
+  color: #888;
+  transition: color 500ms;
+}
+
+.playerImg {
   width: 250px;
   height: 350px;
+  filter: grayscale();
+  transition: filter 500ms;
+}
+
+.playerImg:hover{
+  filter: none;
+}
+
+.player:hover{
+  /* color: #999; */
+  color: #333;
 
 }
 
-#profile li {
-    list-style: none;
+.playerDesc{
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}
+
+.teamName{
+  font-size: 17px;
+  text-transform: uppercase;
+  font-weight: lighter;
+}
+
+.playerName{
+  font-size: 20px;
+  text-transform: uppercase;
 }

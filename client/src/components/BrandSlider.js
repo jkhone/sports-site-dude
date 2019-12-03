@@ -1,5 +1,4 @@
 import React from "react"
-import ReactDom from "react-dom"
 import {brandImages} from "./BrandSliderImages"
 import {Gallery, GalleryImage} from 'react-gesture-gallery'
 import "../styles/base.css"
