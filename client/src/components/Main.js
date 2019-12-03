@@ -6,8 +6,8 @@ import "../styles/Main.css"
 export default props => {
     return (
         <div className="main">
-            <HomeSlider/>
-            <BrandSlider/>
+            <div><HomeSlider/></div>
+            <div><BrandSlider/></div>
         </div>
     )
 }

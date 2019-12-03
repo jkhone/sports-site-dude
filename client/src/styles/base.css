@@ -141,5 +141,11 @@ header{
   font-size: 20px;
 }
 
-.brandCSS {display: flex;
-justify-content: center;}
+.brandshome {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.brandshome img {
+  height: 200px;
+}
