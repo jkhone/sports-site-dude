@@ -1,0 +1,1 @@
+export { useShoes } from '../redux/ducks/shoes'

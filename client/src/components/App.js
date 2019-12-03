@@ -1,11 +1,16 @@
 import React from "react"
-import TeamLogos from './TeamLogos'
+import { BrowserRouter as Router, Route} from "react-router-dom"
+import ShoesPage from './ShoesPage'
+import ProductPage from "./ProductPage"
 
 function App() {
   return (    
-    <div>
-      <TeamLogos />
-    </div>
+    <Router>
+      <div>
+        <Route path="/shoes" component={ShoesPage} />
+        <Route path="/product/:id" component={ProductPage} />
+      </div>
+    </Router>
   )
 }
 

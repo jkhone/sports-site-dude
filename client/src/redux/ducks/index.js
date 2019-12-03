@@ -1,1 +1,1 @@
-
+export { default as shoesReducer } from './shoes'
