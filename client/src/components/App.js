@@ -1,4 +1,16 @@
 import React from "react"
+import { BrowserRouter as Router, Route} from "react-router-dom"
+import ShoesPage from './ShoesPage'
+import ProductPage from "./ProductPage"
+
+function App() {
+  return (    
+
+      <div>
+        <Route path="/shoes" component={ShoesPage} />
+        <Route path="/product/:id" component={ProductPage} />
+      </div>
+    </Router>
 import Players from './Players'
 import HomeSlider from "./homeslider"
 import BrandSlider from "./BrandSlider"
@@ -8,6 +20,7 @@ import Icon from "../lib/Icon"
 
 function App() {
   return (
+    <Router>
     <div className="container">
       <header>
         <div className="header-left">
