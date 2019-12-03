@@ -1,5 +1,4 @@
 import React from "react"
-import ReactDom from "react-dom"
 import {popImages} from "./homesliderimages"
 import {Gallery, GalleryImage} from 'react-gesture-gallery'
 import "../styles/MVPSlider.css"
@@ -37,6 +36,5 @@ export default function() {
     )
 }
 
-const rootElement = document.getElementById("root")
-ReactDom.render(<default/>, rootElement)
+
 
