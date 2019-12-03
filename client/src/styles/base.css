@@ -20,3 +20,116 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.container{
+  width: 100%;
+  color: #999;
+}
+/* HEADER */
+header{
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-left{
+  display: flex;
+  align-items: center;
+}
+
+.header-right{
+  display: flex;
+  align-items: center;
+}
+
+.header-item{
+  margin: 5px 15px;
+  font-size: 22px;
+  padding: 1px 0px;
+}
+
+.header-item:hover{
+  border-bottom: #333 1px solid;
+  color: #333;
+}
+
+.logo{
+  height: 65px;
+  margin: 5px 15px;
+}
+
+.searchBAR{
+  outline: none;
+  margin: 5px 15px;
+  font-size: 22px;
+  color: #999;
+  border: none;
+  border-bottom: 1px solid #999;
+  padding: 1px 2px;
+}
+
+.searchBAR::placeholder{
+  color: #999;
+}
+
+/* FOOTER */
+/* SCORES */
+.scoreBar{
+  background-color: #333;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 18px;
+  border-bottom: 1px solid #999;
+}
+
+.GAME{
+  display: flex;
+  padding: 1px 18px;
+  border-right: #999 1px solid;
+}
+
+.FINALGAME{
+  display: flex;
+  padding: 1px 18px;
+}
+
+.WIN{
+  color: #00FFDA;
+  margin: 5px 10px;
+  font-weight: bold;
+}
+
+.LOSS{
+  color: #999;
+  margin: 5px 10px;
+}
+
+/* REAL FOOTER */
+.footer{
+  width: 100%;
+  /* margin-bottom: -15px; */
+  padding-bottom: 50px;
+  background: #333;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.footerSECTION{
+  display: flex;
+  flex-direction: column;
+  margin: 0px 100px 0px 50px;
+}
+
+.footer-title{
+  font-size: 22px;
+}
+
+.footer-information{
+  font-size: 17px;
+}
+
+
+.social-icon{
+  margin: 2px 5px;
+  font-size: 20px;
+}
