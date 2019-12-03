@@ -85,6 +85,8 @@ header{
   align-items: center;
   font-size: 18px;
   border-bottom: 1px solid #999;
+  /* border-top: 2px solid #00FFDA;
+  z-index: 10; */
 }
 
 .GAME{

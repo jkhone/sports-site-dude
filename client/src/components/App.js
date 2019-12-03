@@ -10,6 +10,7 @@ import Footer from "./Footer"
 
 function App() {
   return (
+
     <Router>
       <div className="container">
         <Header />
@@ -17,8 +18,7 @@ function App() {
         <Route path="/shoes" component={ShoesPage} />
         <Route path="/product/:id" component={ProductPage} />
         <Route path="/players" component={Players} />
-        <Footer />
-        
+        <Footer />    
       </div>
     </Router>
   )
