@@ -1,12 +1,11 @@
 import React from "react"
-
+import HomeSlider from "./homeslider"
 import "../styles/base.css"
 import LOGO from "../assets/LOGO-01.jpg"
 import Icon from "../lib/Icon"
 
 function App() {
   return (
-    
     <div className="container">
       <header>
         <div className="header-left">
@@ -146,7 +145,6 @@ function App() {
             </div>
         </div>
       </footer>
-
     </div>
   )
 }
