@@ -1,4 +1,5 @@
 import React from "react"
+import Players from './Players'
 import HomeSlider from "./homeslider"
 import BrandSlider from "./BrandSlider"
 import "../styles/base.css"
