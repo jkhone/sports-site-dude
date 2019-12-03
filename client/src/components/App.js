@@ -1,5 +1,6 @@
 import React from "react"
 import HomeSlider from "./homeslider"
+import BrandSlider from "./BrandSlider"
 import "../styles/base.css"
 import LOGO from "../assets/LOGO-01.jpg"
 import Icon from "../lib/Icon"
@@ -36,6 +37,9 @@ function App() {
           </div>
         </div>
       </header>
+
+<HomeSlider/>
+<BrandSlider/>
 
       <footer>
         <div className="scoreBar">

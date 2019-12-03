@@ -133,3 +133,7 @@ header{
   margin: 2px 5px;
   font-size: 20px;
 }
+
+.brandCSS {display: flex;
+justify-content: center;}
+
