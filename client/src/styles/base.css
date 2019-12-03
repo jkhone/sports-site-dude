@@ -25,6 +25,11 @@ code {
   width: 100%;
   color: #999;
 }
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
 /* HEADER */
 header{
   display: flex;
@@ -135,3 +140,6 @@ header{
   margin: 2px 5px;
   font-size: 20px;
 }
+
+.brandCSS {display: flex;
+justify-content: center;}

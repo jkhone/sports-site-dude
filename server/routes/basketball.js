@@ -17,7 +17,7 @@ router.get("/players", (request, response, next) => {
 router.get("/shoes", (request, response, next) => {
     console.log("hello")
     const sql = `
-    SELECT id, playerid, brand, name, size, color, url
+    SELECT id, playerid, brand, name, size, color, url, price
     FROM shoes
     `
 
