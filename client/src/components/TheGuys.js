@@ -7,7 +7,7 @@ import Curry3 from "../assets/Color/Curry3.jpg"
 import Giannis from "../assets/Color/giannis.jpg"
 import Giannis2 from "../assets/Color/giannis1Color.jpg"
 import JHarden from "../assets/Color/JHarden.jpg"
-import JHarden2 from "../assets/Color/JHarden2.jpg"
+// import JHarden2 from "../assets/Color/JHarden2.jpg"
 import Kawhi from "../assets/Color/KawhiColor.jpg"
 import Kawhi2 from "../assets/Color/Kawhi2.jpeg"
 import Kawhi3 from "../assets/Color/Kawhi3.jpg"
@@ -24,29 +24,29 @@ export default props => {
     <div className="cont">
       <div className="row">
         <div className="column1">
-          <img className="galleryImg" src={Curry3} />
-          <img className="galleryImg" src={Kawhi2} />
-          <img className="galleryImg" src={JHarden} />
-          <img className="galleryImg" src={PGeorge} />
+          <img className="galleryImg" src={Curry3} alt="whoops"/>
+          <img className="galleryImg" src={Kawhi2} alt="whoops"/>
+          <img className="galleryImg" src={JHarden} alt="whoops"/>
+          <img className="galleryImg" src={PGeorge} alt="whoops"/>
           
         </div>
         <div className="column2">
-          <img className="galleryImg" src={Giannis} />
-          <img className="galleryImg" src={Lebron2} />
-          <img className="galleryImg" src={Curry1} />
-          <img className="galleryImg" src={Green} />
+          <img className="galleryImg" src={Giannis} alt="whoops"/>
+          <img className="galleryImg" src={Lebron2} alt="whoops"/>
+          <img className="galleryImg" src={Curry1} alt="whoops"/>
+          <img className="galleryImg" src={Green} alt="whoops"/>
         </div>
         <div className="column2">
-          <img className="galleryImg" src={Giannis2} />
-          <img className="galleryImg" src={Green2} />
-          <img className="galleryImg" src={Kemba} />
-          <img className="galleryImg" src={Curry2} />
+          <img className="galleryImg" src={Giannis2} alt="whoops"/>
+          <img className="galleryImg" src={Green2} alt="whoops"/>
+          <img className="galleryImg" src={Kemba} alt="whoops"/>
+          <img className="galleryImg" src={Curry2} alt="whoops"/>
         </div>
         <div className="column2">
-          <img className="galleryImg" src={Kawhi3} />
-          <img className="galleryImg" src={Kemba2} />
-          <img className="galleryImg" src={Kawhi} />
-          <img className="galleryImg" src={Lebron} />
+          <img className="galleryImg" src={Kawhi3} alt="whoops"/>
+          <img className="galleryImg" src={Kemba2} alt="whoops"/>
+          <img className="galleryImg" src={Kawhi} alt="whoops"/>
+          <img className="galleryImg" src={Lebron} alt="whoops"/>
         </div>
       </div>
     </div>
