@@ -1,0 +1,32 @@
+
+.galleryImg{
+    width: 98%;
+    filter: grayscale();
+    transition: filter 500ms;
+}
+
+.galleryImg:hover{
+    filter: none;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column1 {
+    flex: 25%;
+}
+
+.column2 {
+    flex: 25%;
+}
+
+.column img {
+    vertical-align: middle;
+}
+
+.cont{
+    width: 94.2%;
+    margin: auto;
+}
