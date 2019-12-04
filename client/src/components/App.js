@@ -7,6 +7,7 @@ import "../styles/base.css"
 import Header from "./Header"
 import Footer from "./Footer"
 import Main from "./Main"
+import TheGuys from "./TheGuys"
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
           <Route path="/shoes" component={ShoesPage} />
           <Route path="/product/:id" component={ProductPage} />
           <Route path="/players" component={Players} />
+
+
+          <Route path="/MVPs" component={TheGuys}/>
         <Footer />    
       </div>
     </Router>

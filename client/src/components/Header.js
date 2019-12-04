@@ -22,9 +22,11 @@ export default props => {
               PLAYERS
             </div>
           </Link>
+          <Link to="/MVPs">
           <div className="header-item">
             THE GUYS
           </div>
+          </Link>
         </div>
         <div className="header-right">
           <div>
