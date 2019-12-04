@@ -16,9 +16,9 @@ export default props => {
     return (
         <div>
             <div className='product'>
-                <img src={shoe.url} alt=''/>
+                <img src={shoe.pic} alt=''/>
                 <p>{shoe.brand}</p>
-                <p>{shoe.name}</p>
+                <p>{shoe.shoe}</p>
                 <p>{shoe.size}</p>
                 <p>{shoe.price}</p>
                 <button>Add to Cart</button>
