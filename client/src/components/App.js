@@ -15,11 +15,13 @@ function App() {
     <Router>
       <div className="container">
         <Header />
+
         <Route exact path="/form" component={Form} />
         <Route exact path="/" component={Main} />
         <Route path="/shoes" component={ShoesPage} />
         <Route path="/product/:id" component={ProductPage} />
         <Route path="/players" component={Players} />
+
         <Footer />    
       </div>
     </Router>
