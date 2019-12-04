@@ -2,6 +2,7 @@ import React from "react"
 import LOGO from "../assets/LOGO-01.jpg"
 import Icon from "../lib/Icon"
 import { Link } from "react-router-dom"
+import Cart from "./Cart"
 
 export default props => {
     return (
@@ -39,6 +40,7 @@ export default props => {
           </div>
           <div className="header-item">
             <Icon icon="shopping-cart" />
+            <Cart />
           </div>
         </div>
       </header>
