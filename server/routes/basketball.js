@@ -27,6 +27,20 @@ router.post("/players", (request, response, next) => {
     })
 })
 
+router.get("/players/:id", (request, response, next) => {
+    console.log("hello")
+    const id = request.params.id
+    const sql = `
+    SELECT id, player, team, url
+    FROM players
+    WHERE id = ?
+    `
+
+    db.query(sql, [id], (error, results, fields) => {
+        response.json(results)
+    })
+})
+
 
 
 router.get("/shoes", (request, response, next) => {

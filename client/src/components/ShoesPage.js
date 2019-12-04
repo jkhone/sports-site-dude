@@ -10,6 +10,7 @@ export default props => {
     return (
         <>
         <div><ProductFilter/></div>
+        
         <div className="shoes">
             {shoes.map((shoe, i) => (
                 <Link to={"/product/" + shoe.id} key={'shoe' + i}>
