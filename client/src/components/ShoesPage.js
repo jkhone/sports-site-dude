@@ -13,10 +13,10 @@ export default props => {
                     <div 
                     
                     className="shoe">
-                        <img src={`${shoe.url}`} alt="" />
+                        <img src={`${shoe.pic}`} alt="" />
                         <p>{shoe.brand}</p>
-                        <p>{shoe.name}</p>
-                        <p>${shoe.price.toFixed(2)}</p>
+                        <p>{shoe.shoe}</p>   
+                        <p>${shoe.price}</p>
                     </div>
                 </Link>
             ))}
