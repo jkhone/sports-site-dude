@@ -8,19 +8,19 @@ export const brandFilter = [
     url: "/brand/2"
     },
     {
-    img: "https://img.pngio.com/puma-graphic-shorts-mens-1474363556png-puma-logo-png-puma-logo-png-300_300.png",
+    img: "https://glennssportinggoods.com/wp-content/uploads/2018/06/Adidas.png",
     url: "/brand/3"
     },
     {
-    img: "https://glennssportinggoods.com/wp-content/uploads/2018/06/New-Balance.png",
+    img: "https://upload.wikimedia.org/wikipedia/en/thumb/3/37/Jumpman_logo.svg/1200px-Jumpman_logo.svg.png",
     url: "/brand/4"
     },
     {
-    img: "https://glennssportinggoods.com/wp-content/uploads/2018/06/Adidas.png",
+    img: "https://img.pngio.com/puma-graphic-shorts-mens-1474363556png-puma-logo-png-puma-logo-png-300_300.png",
     url: "/brand/5"
     },
     {
-    img: "https://upload.wikimedia.org/wikipedia/en/thumb/3/37/Jumpman_logo.svg/1200px-Jumpman_logo.svg.png",
+    img: "https://glennssportinggoods.com/wp-content/uploads/2018/06/New-Balance.png",
     url: "/brand/6"
     },
     {

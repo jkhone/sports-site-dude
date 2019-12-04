@@ -1,19 +1,9 @@
-.shoes {
-    width: 1000px;
-    display: flex;
-    flex-wrap: wrap;
-    margin: auto;
-    justify-content: space-between;
-}
 
-.shoe {
-    width: 225px;
-    height: 300px;
-    border: 1px solid black ;
-    margin: 20px 0;
-    padding: 10px;
-}
-
-.shoe img {
+.shoeImg {
     height: 140px;
+}
+
+.shoePrice{
+    color: #00FFDA;
+    /* font-weight: bold; */
 }

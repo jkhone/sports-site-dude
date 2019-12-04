@@ -8,8 +8,7 @@ export default props => {
   return (
     <div id="playercontainer">
      {players.map((players, i) => (
-      <div id="profile"
-      key={'player' + i}>
+      <div id="profile" key={'player' + i}>
         <div className="player">
           <img className="playerImg" src={`${players.url}`} alt="" />
           <div className="playerDesc">

@@ -1,0 +1,24 @@
+/* ShoesPageFilter */
+
+.brandfiltercontainer {
+	width: 1000px;
+	margin: auto;
+}
+
+.brandfilter img {
+	width: 45px;
+	/* border: 1px solid #00FFDA; */
+  margin: 0px 5px;
+}
+    
+/* .brandfilter img:hover {
+	transform: scale(.9);
+} */
+    
+.brandfilter {
+	display: flex;
+	justify-content: space-between;
+
+	width: 100%;
+	/* margin: auto; */
+}
