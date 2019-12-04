@@ -26,8 +26,17 @@ router.get("/shoes", (request, response, next) => {
     })
 })
 
+router.get("/shoes/:id", (request, response, next) => {
+    console.log("hello")
+    const id = request.params.id
+    const sql = `
+    SELECT id, playerid, brand, name, size, color, url, price
+    FROM shoes WHERE id = ?
+    `
 
-
-
+    db.query(sql, [id], (error, results, fields) => {
+        response.json(results)
+    })
+})
 
 module.exports = router
