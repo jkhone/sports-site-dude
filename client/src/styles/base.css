@@ -112,7 +112,6 @@ header{
 /* REAL FOOTER */
 .footer{
   width: 100%;
-  /* margin-bottom: -15px; */
   padding-bottom: 50px;
   background: #333;
   display: flex;
@@ -139,13 +138,17 @@ header{
   font-size: 20px;
 }
 
+
+
+
 .brandshome {
   display: flex;
   justify-content: space-evenly;
+  
 }
 
 .brandshome img {
-  height: 200px;
+  max-height: 200px;
 }
 
 
@@ -163,6 +166,3 @@ padding: 5px;
 .brandfilter {display: flex;
 justify-content: center;
 }
-/* ShoesPageFilter */
-
-

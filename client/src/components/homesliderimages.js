@@ -7,30 +7,24 @@ import KAWHI from "../assets/MVP-Slider/Kawhi.jpg"
 
 export const popImages = [
     {
-    img: LEBRON,
-    url: "/player/1"
-
+      img: LEBRON,
+      url: "/player/1"
     },
     {
-    img: CURRY,
-    url: "/player/2"
-
+      img: CURRY,
+      url: "/player/10"
     },
     {
-    img: GIANNIS,
-    url: "/player/3"
-
+      img: GIANNIS,
+      url: "/player/13"
     },
     {
-    img: JHARDEN,
-    url: "/player/4"
-
+      img: JHARDEN,
+      url: "/player/7"
     },
     {
-    img: KAWHI,
-    url: "/player/5"
-        
+      img: KAWHI,
+      url: "/player/17"  
     }
-
   ];
 
