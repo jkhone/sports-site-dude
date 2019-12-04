@@ -11,6 +11,7 @@ export default props => {
     return (
         <>
         <div><ProductFilter/></div>
+
         <div id="playercontainer">
             {shoes.map((shoe, i) => (
                 <Link to={"/product/" + shoe.id} key={'shoe' + i}>

@@ -1,5 +1,6 @@
 import React from 'react' 
 import { usePlayers } from "../hooks"
+import { Link } from 'react-router-dom'
 import '../styles/Players.css'
 
 export default props => {
@@ -7,8 +8,9 @@ export default props => {
 
   return (
     <div id="playercontainer">
-     {players.map((players, i) => (
-      <div id="profile" key={'player' + i}>
+      {players.map((players, i) => (
+      <div id="profile">
+      <Link to={"/player/" + players.id} key={'player' + i}>
         <div className="player">
           <img className="playerImg" src={`${players.url}`} alt="" />
           <div className="playerDesc">
@@ -16,8 +18,10 @@ export default props => {
             <div className="playerName">{players.player}</div>
           </div>
         </div>
-  	  </div>
-     ))}
+      </Link>
+  	</div>
+        )) }
+
     </div>
     
     )
