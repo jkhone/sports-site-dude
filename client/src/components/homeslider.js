@@ -14,7 +14,8 @@ export default function() {
         showThumbs={false}
         showStatus={false}
         showIndicators={false}
-        showArrows={false}>
+        showArrows={false}
+        stopOnHover={false}>
         {popImages.map((pop, i) => (
             <div key={"pop" + i}>
                 <Link to={pop.url}>

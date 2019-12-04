@@ -150,3 +150,19 @@ header{
 .brandshome img {
   max-height: 200px;
 }
+
+
+/* ShoesPageFilter */
+
+.brandfilter img {height: 150px;
+width: 150px;
+border: 1px solid #00FFDA;
+padding: 5px;
+}
+
+.brandfilter img:hover {transform: scale(.9);
+}
+
+.brandfilter {display: flex;
+justify-content: center;
+}
