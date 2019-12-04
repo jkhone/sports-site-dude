@@ -7,9 +7,11 @@ export default props => {
     return (
         <header>
         <div className="header-left">
+          <Link to="/">
           <div>
             <img className="logo" src={LOGO} alt="" />
           </div>
+          </Link>
           <Link to="/shoes">
             <div className="header-item">
               SHOES
