@@ -79,23 +79,44 @@ header{
 
 /* FOOTER */
 /* SCORES */
-.scoreBar{
+@keyframes customticker {
+  0% {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+.scoreBar {
+  width: 100%;
+  overflow: hidden;
   background-color: #333;
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  font-size: 18px;
-  border-bottom: 1px solid #999;
-  border-top: 1px solid #999;
-  margin-top: 10px;
-  /* border-top: 2px solid #00FFDA;
-  z-index: 10; */
+  border-top: #888 1px solid;
+  border-bottom: #888 1px solid;
+}
+
+.games {
+  display: flex;
+  white-space: nowrap;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-name: customticker;
+  animation-name: customticker;
+  -webkit-animation-duration: 30s;
+  animation-duration: 30s;
 }
 
 .GAME{
   display: flex;
-  padding: 1px 18px;
-  border-right: #888 1px solid;
+  border-left: 1px solid #888;
+  border-right: 1px solid #888;
 }
 
 .FINALGAME{
@@ -121,6 +142,7 @@ header{
   background: #333;
   display: flex;
   justify-content: flex-start;
+  padding-top: 5px;
 }
 
 .footerSECTION{
@@ -135,8 +157,8 @@ header{
 
 .footer-information{
   font-size: 17px;
+  font-weight: lighter;
 }
-
 
 .social-icon{
   margin: 2px 5px;
@@ -145,7 +167,7 @@ header{
 
 
 
-
+/* brand logos main page */
 .brandshome {
   display: flex;
   justify-content: space-evenly;
