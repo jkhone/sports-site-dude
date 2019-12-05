@@ -28,15 +28,15 @@ export default props => {
           <div key={"cart-product" + product.id} className="item">
             <img src={product.pic} alt="whoops" />
             <div className="info">
-              <p>{product.brand}</p>
+              <p className="brand">{product.brand}</p>
               <p className="title">{product.shoe}</p>
-              <p>Size {product.size}</p>
-              <p>Quantity: {product.quantity}</p>
+              <p className="title">Size {product.size}</p>
+              <p className="count">Quantity: {product.quantity}</p>
             </div>
             <div className="price">
               <p>${product.price.toFixed(2)}</p>
-              <button onClick={e => update(e, product.id, -1)}>-</button>
-              <button onClick={e => update(e, product.id, 1)}>+</button>
+              <button className="cartButtons" onClick={e => update(e, product.id, -1)}>-</button>
+              <button className="cartButtons" onClick={e => update(e, product.id, 1)}>+</button>
             </div>
           </div>
         ))}

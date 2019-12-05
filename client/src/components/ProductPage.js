@@ -5,8 +5,7 @@ import "../styles/ProductPage.css"
 
 export default props => {
     const [shoe, setShoe] = useState([])
-    const id = props.match.params.id
-    
+    const id = props.match.params.id    
     const { open, add } = useCart()
 
     function handleAdd(e, product) {
@@ -28,11 +27,11 @@ export default props => {
                     <img src={shoe.pic} alt=''/>
                 </div>
                 <div className="productright">
-                    <p>{shoe.brand}</p>
-                    <p>{shoe.shoe}</p>
-                    <p>Size {shoe.size}</p>
-                    <p>${shoe.price}</p>
-                    <button onClick={e => handleAdd(e, shoe)}>Add to Cart</button>
+                    <div className="brand">{shoe.brand}</div>
+                    <div className="name">{shoe.shoe}</div>
+                    <div className="size">Size {shoe.size}</div>
+                    <div className="ShoePrice">${shoe.price}</div>
+                    <button className="addToCart" onClick={e => handleAdd(e, shoe)}>Add to Cart</button>
                 </div>
             </div>
         </div>   

@@ -1,8 +1,8 @@
 .cart {
   position: fixed;
   width: 450px;
-  background: #333;
-  color: white;
+  background: white;
+  color: #333;
   transition: right 0.5s;
   top: 0;
   right: -450px;
@@ -10,20 +10,22 @@
   display: flex;
   flex-direction: column;
   z-index: 10;
+  border-left: #333 1px solid;
 }
 
 .cart .toggle {
   position: absolute;
   width: 50px;
   height: 50px;
-  color: white;
-  background: #333;
+  color: #888;
+  background: white;
   top: 0;
   left: -50px;
-  line-height: 50px;
+  line-height: 80px;
   text-align: center;
-  font-size: 25px;
+  font-size: 23px;
   cursor: pointer;
+  border-right: #333 1px solid;
 }
 
 .cart.open {
@@ -35,62 +37,11 @@
   overflow: auto;
 }
 
-.subtotal {
-  height: 200px;
-  position: relative;
-  padding: 20px;
-}
-
-.subtotal::after {
-  content: "";
-  width: 100%;
-  height: 20px;
-  display: block;
-  position: absolute;
-  top: -20px;
-  left: 0;
-  background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.2), transparent);
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), transparent);
-}
-
-.total {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.total h3 {
-  text-transform: uppercase;
-  font-weight: lighter;
-  color: #666;
-}
-
-.total p {
-  color: #00FFDA;
-  font-size: 1.5em;
-}
-
-.checkout {
-  width: 100%;
-  background: #111;
-  color: white;
-  text-transform: uppercase;
-  font-weight: lighter;
-  color: #eee;
-  cursor: pointer;
-  font-size: 1em;
-}
-
-.checkout:hover {
-  background: black;
-}
-
 .item {
   width: 90%;
   margin: 0 auto;
   display: flex;
   align-items: center;
-  border-top: 1px solid black;
   margin: 10px 0;
 }
 
@@ -109,8 +60,16 @@
 }
 
 .price {
-  width: 15%;
-  margin-left: 10px;
+  width: 18%;
+  color: #333;
+}
+
+.cartButtons{
+  width: 46%;
+  margin: 2%;
+  border: 1px solid #333;
+  color: #333;
+  font-size: 14px;
 }
 
 .toggle div span {
@@ -119,14 +78,82 @@
   display: inline-block;
   background: #00FFDA;
   border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  top: 23px;
+  width: 17px;
+  height: 17px;
+  top: 38px;
   left: 25px;
   color: black;
-  line-height: 20px;
+  line-height: 17px;
 }
 
 .price button {
   display: inline;
+}
+
+.brand{
+  font-size: 17px;
+	text-transform: uppercase;
+	font-weight: lighter;
+}
+
+.title{
+  font-size: 20px; 
+	text-transform: uppercase;
+}
+
+.count{
+  font-size: 17px;
+	text-transform: uppercase;
+}
+
+/* Checkout */
+.subtotal {
+  height: 200px;
+  position: relative;
+  padding: 20px;
+  background: #888;
+}
+
+.subtotal::after {
+  content: "";
+  width: 100%;
+  height: 20px;
+  display: block;
+  position: absolute;
+  top: -20px;
+  left: 0;
+  background: -webkit-linear-gradient(bottom, rgba(150, 150, 150, 0.7), transparent);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), transparent);
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.total h3 {
+  text-transform: uppercase;
+  font-weight: lighter;
+  color: #333;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.total p {
+  color: #00FFDA;
+  font-size: 1.5em;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.checkout {
+  width: 100%;
+  background: #888;
+  text-transform: uppercase;
+  font-weight: lighter;
+  color: #333;
+  cursor: pointer;
+  font-size: 1em;
+  border: #333 1px solid;
+  font-family: 'Roboto Condensed', sans-serif;
 }
