@@ -14,6 +14,7 @@ router.get("/players", (request, response, next) => {
 })
 
 router.post("/players", (request, response, next) => {
+    console.log("players")
     const player = request.body.player
     const team = request.body.team
     const url = request.body.url
@@ -26,6 +27,21 @@ router.post("/players", (request, response, next) => {
         response.json(results)
     })
 })
+
+router.get("/players/teams/:team", (request, response, next) => {
+    console.log("team")
+    const team = request.params.team
+    const sql = `
+    SELECT id, player, team, url
+    FROM players
+    WHERE team = ?
+    `
+
+    db.query(sql, [team], (error, results, fields) => {
+        response.json(results)
+    })
+})
+
 
 router.get("/players/:id", (request, response, next) => {
     console.log("hello")
