@@ -1,5 +1,5 @@
 import React from "react"
-import LOGO from "../assets/LOGO-01.jpg"
+import LOGO from "../assets/LOGO-01.png"
 import Icon from "../lib/Icon"
 import { Link } from "react-router-dom"
 import Cart from "./Cart"
