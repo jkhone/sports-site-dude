@@ -65,6 +65,20 @@ router.post("/shoes", (request, response, next) => {
 
 
 
+
+router.get("/shoes/brands/:brand", (request, response, next) => {
+    const brand = request.params.brand
+    console.log("nike")
+    const sql = `
+    SELECT id, playerid, brand, shoe, size, color, pic, price
+    FROM shoes WHERE brand = ?
+    `
+    db.query(sql,[brand], (error, results, fields) => {
+        console.log("success")
+        response.json(results)
+    })
+})
+
 router.get("/shoes/:id", (request, response, next) => {
     console.log("hello")
     const id = request.params.id
@@ -77,6 +91,5 @@ router.get("/shoes/:id", (request, response, next) => {
         response.json(results)
     })
 })
-
 
 module.exports = router

@@ -9,13 +9,15 @@ import Footer from "./Footer"
 import Main from "./Main"
 import Form from "./form"
 
+
 function App() {
   return (
 
     <Router>
       <div className="container">
         <Header />
-
+     
+   
         <Route exact path="/form" component={Form} />
         <Route exact path="/" component={Main} />
         <Route path="/shoes" component={ShoesPage} />
