@@ -1,19 +1,76 @@
-.playerprofile {display: flex;
-width: 100%;}
+.playerprofile {
+	width: 100vh;
+	height: 80vh;
+	margin: auto;
+	display: flex;
+	align-items: center;
+}
 
-.ppProfileImage {}
+.productleft {
+	height: 98%;
+}
 
-.ppProfileImage {}
+.section2{
+	width: 40vh;
+	height: 98%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
 
-.ppTeamName {font-family: cursive;
-font-size: 80px;
-border: 2px solid black;
-text-align: center;}
+.playerDesc{
+	display: flex;
+	flex-direction: column;
+}
 
-.ppPlayerName {font-size: 80px;
-    border: 2px solid black;
-    text-align: center;}
+.TeamName {
+	font-size: 17px;
+	text-transform: uppercase;
+	font-weight: lighter;
+	margin: 0px;
+}
 
-.ppShoeImage {justify-content: center;}
+.PlayerName {
+	font-size: 20px;
+	text-transform: uppercase;
+	margin: 0px;
 
-.ppShoeImage img {width: 200px;}
+}
+
+.ppShoeImage {
+	justify-content: center;
+}
+
+.shoePic{
+	width: 100%;
+}
+
+
+.productright{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	width: 35vh;
+}
+ 
+.brand{
+	font-size: 17px;
+	text-transform: uppercase;
+	font-weight: lighter;
+}
+
+.name{
+	font-size: 20px;
+	text-transform: uppercase;
+}
+
+.size{
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.ShoePrice{
+  font-size: 20px;
+	text-transform: uppercase;
+	color: #00FFDA;
+}

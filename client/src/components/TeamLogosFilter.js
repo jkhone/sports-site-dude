@@ -15,7 +15,7 @@ export default function() {
                     <div onClick={e=> team(logo.name)}>
                         <img src={`${logo.img}`} alt="whoops" />
                     </div>
-                </div>
+                </div> 
             ))}
         </div>
 
