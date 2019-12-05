@@ -30,6 +30,9 @@ a {
 }
 /* HEADER */
 header{
+  background: white;
+  /* position: fixed; */
+  /* top: -79px; */
   display: flex;
   justify-content: space-between;
 }
