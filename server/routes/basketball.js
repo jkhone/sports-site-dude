@@ -42,6 +42,19 @@ router.get("/players/teams/:team", (request, response, next) => {
     })
 })
 
+router.get("/players/search/:search", (request, response, next) => {
+    console.log("search")
+    const search = `%${request.params.search.toLowerCase()}%` 
+    const sql = `
+    SELECT id, player, team, url
+    FROM players
+    WHERE player LIKE ?
+    `
+
+    db.query(sql, [search], (error, results, fields) => {
+        response.json(results)
+    })
+})
 
 router.get("/players/:id", (request, response, next) => {
     console.log("hello")
@@ -68,6 +81,20 @@ router.get("/shoes", (request, response, next) => {
 
     db.query(sql, (error, results, fields) => {
         console.log("success")
+        response.json(results)
+    })
+})
+
+router.get("/shoes/search/:search", (request, response, next) => {
+    console.log("search")
+    const search = `%${request.params.search.toLowerCase()}%` 
+    const sql = `
+    SELECT id, playerid, brand, shoe, size, color, pic, price
+    FROM shoes
+    WHERE brand LIKE ?
+    `
+
+    db.query(sql, [search], (error, results, fields) => {
         response.json(results)
     })
 })

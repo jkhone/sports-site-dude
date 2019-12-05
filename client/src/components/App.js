@@ -10,7 +10,9 @@ import Footer from "./Footer"
 import Main from "./Main"
 import TheGuys from "./TheGuys"
 import Form from "./form"
+import PlayerSearch from "./PlayerSearch"
 import {Stripe} from "./StripeCheckout"
+
 
 
 function App() {
