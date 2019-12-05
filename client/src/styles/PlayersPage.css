@@ -1,0 +1,19 @@
+.playerprofile {display: flex;
+width: 100%;}
+
+.ppProfileImage {}
+
+.ppProfileImage {}
+
+.ppTeamName {font-family: cursive;
+font-size: 80px;
+border: 2px solid black;
+text-align: center;}
+
+.ppPlayerName {font-size: 80px;
+    border: 2px solid black;
+    text-align: center;}
+
+.ppShoeImage {justify-content: center;}
+
+.ppShoeImage img {width: 200px;}

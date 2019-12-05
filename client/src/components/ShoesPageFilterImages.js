@@ -10,6 +10,7 @@ export const brandFilter = [
       name: "Under Armour"
     },
     {
+
       id:"3",
       img: "https://img.pngio.com/puma-graphic-shorts-mens-1474363556png-puma-logo-png-puma-logo-png-300_300.png",
       name: "Puma"
@@ -28,6 +29,7 @@ export const brandFilter = [
       id:"5",
       img: "https://upload.wikimedia.org/wikipedia/en/thumb/3/37/Jumpman_logo.svg/1200px-Jumpman_logo.svg.png",
       name: "Jordan"
+
     },
     {
       id:"6",
