@@ -1,0 +1,7 @@
+
+button.StripeCheckout {width: 100%;
+margin: none
+;}
+
+button.StripeCheckout:hover {transform: scale(1.05);
+}
