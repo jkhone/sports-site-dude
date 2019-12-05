@@ -1,4 +1,6 @@
 import React from 'react' 
+import { Link } from 'react-router-dom'
+
 import '../styles/TheGuys.css'
 
 import Curry1 from "../assets/Color/CurryColor.jpg"
@@ -24,29 +26,60 @@ export default props => {
     <div className="cont">
       <div className="row">
         <div className="column1">
-          <img className="galleryImg" src={Curry3} alt="whoops"/>
-          <img className="galleryImg" src={Kawhi2} alt="whoops"/>
-          <img className="galleryImg" src={JHarden} alt="whoops"/>
-          <img className="galleryImg" src={PGeorge} alt="whoops"/>
-          
+          <Link to={"/player/10"}>
+            <img className="galleryImg" src={Curry3} alt="whoops"/>
+          </Link>
+          <Link to={"/player/17"}>
+            <img className="galleryImg" src={Kawhi2} alt="whoops"/>
+          </Link>
+          <Link to={"/player/7"}>
+            <img className="galleryImg" src={JHarden} alt="whoops"/>
+          </Link>
+          <Link to={"/player/16"}>
+            <img className="galleryImg" src={PGeorge} alt="whoops"/>
+          </Link>
         </div>
         <div className="column2">
-          <img className="galleryImg" src={Giannis} alt="whoops"/>
-          <img className="galleryImg" src={Lebron2} alt="whoops"/>
-          <img className="galleryImg" src={Curry1} alt="whoops"/>
-          <img className="galleryImg" src={Green} alt="whoops"/>
+          <Link to={"/player/13"}>
+            <img className="galleryImg" src={Giannis} alt="whoops"/>
+          </Link>
+          <Link to={"/player/1"}>
+            <img className="galleryImg" src={Lebron2} alt="whoops"/>
+          </Link>
+          <Link to={"/player/10"}>
+            <img className="galleryImg" src={Curry1} alt="whoops"/>
+          </Link>
+          <Link to={"/player/11"}>
+            <img className="galleryImg" src={Green} alt="whoops"/>
+          </Link>
         </div>
         <div className="column2">
-          <img className="galleryImg" src={Giannis2} alt="whoops"/>
-          <img className="galleryImg" src={Green2} alt="whoops"/>
-          <img className="galleryImg" src={Kemba} alt="whoops"/>
-          <img className="galleryImg" src={Curry2} alt="whoops"/>
+          <Link to={"/player/13"}>
+            <img className="galleryImg" src={Giannis2} alt="whoops"/>
+          </Link>
+          <Link to={"/player/11"}>
+            <img className="galleryImg" src={Green2} alt="whoops"/>
+          </Link>
+          <Link to={"/player/4"}>
+            <img className="galleryImg" src={Kemba} alt="whoops"/>
+          </Link>
+          <Link to={"/player/10"}>
+            <img className="galleryImg" src={Curry2} alt="whoops"/>
+          </Link>
         </div>
         <div className="column2">
-          <img className="galleryImg" src={Kawhi3} alt="whoops"/>
-          <img className="galleryImg" src={Kemba2} alt="whoops"/>
-          <img className="galleryImg" src={Kawhi} alt="whoops"/>
-          <img className="galleryImg" src={Lebron} alt="whoops"/>
+          <Link to={"/player/17"}>
+            <img className="galleryImg" src={Kawhi3} alt="whoops"/>
+          </Link>
+          <Link to={"/player/4"}>
+            <img className="galleryImg" src={Kemba2} alt="whoops"/>
+          </Link>
+          <Link to={"/player/17"}>
+            <img className="galleryImg" src={Kawhi} alt="whoops"/>
+          </Link>
+          <Link to={"/player/1"}>
+            <img className="galleryImg" src={Lebron} alt="whoops"/>
+          </Link>
         </div>
       </div>
     </div>

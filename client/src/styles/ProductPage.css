@@ -54,6 +54,7 @@
 	font-family: 'Roboto Condensed', sans-serif;
 	outline: none;
 	cursor: pointer;
+	transition: color 500ms, border 500ms;
 }
 
 .addToCart:hover{
