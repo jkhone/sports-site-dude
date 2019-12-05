@@ -2,6 +2,7 @@ import React from "react"
 import { useCart } from "../hooks"
 import Icon from "../lib/Icon"
 import "../styles/Cart.css"
+import {Stripe} from "./StripeCheckout"
 
 export default props => {
   const { visible, toggle, cart, total, items, change } = useCart()
@@ -46,12 +47,9 @@ export default props => {
           <h3>Subtotal</h3>
           <p>${total}</p>
         </div>
-        <button
-          onClick={e => alert(`Checkout - Subtotal: ${total}`)}
-          className="checkout"
-        >
-          Checkout
-        </button>
+        <div>
+          <Stripe/>
+        </div>
       </div>
     </div>
   )

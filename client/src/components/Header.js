@@ -1,5 +1,5 @@
 import React from "react"
-import LOGO from "../assets/LOGO-01.jpg"
+import LOGO from "../assets/LOGO-01.png"
 import Icon from "../lib/Icon"
 import { Link } from "react-router-dom"
 import Cart from "./Cart"
@@ -10,7 +10,7 @@ export default props => {
         <div className="header-left">
           <Link to="/">
           <div>
-            <img className="logo" src={LOGO} alt="" />
+            <img className="logo" src={LOGO} alt="whoops" />
           </div>
           </Link>
           <Link to="/shoes">
@@ -39,7 +39,6 @@ export default props => {
             </input>
           </div>
           <div className="header-item">
-            {/* <Icon icon="shopping-cart" /> */}
             <Cart />
           </div>
         </div>

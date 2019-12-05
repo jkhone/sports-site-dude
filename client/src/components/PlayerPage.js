@@ -23,28 +23,25 @@ export default props => {
     return (
         <div>
             <div className='playerprofile'>
-                 <div className="section1">
-                    <div className="ppProfileImage">
-                        <img src={player.url} alt=''/>
-                    </div>
+                 <div className="productleft">
+                    <img src={player.url} alt=''/>
                 </div>
                 <div className="section2">
-                    <div className="ppTeamName">
-                        <p>{player.team}</p>
+                    <div className="playerDesc">
+                        <div className="TeamName">
+                            {player.team}
+                        </div>
+                        <div className="PlayerName">
+                            {player.player}
+                        </div>
                     </div>
-                    <div className="ppPlayerName">
-                        <p>{player.player}</p>
-                    </div>
-                    
-                    <Link to={"/product/" + shoe.id} key={'shoe'}>
-                    <div 
-                    className="ppShoeImage">
-                        <img src={`${shoe.pic}`} alt="" />
-                        <p>{shoe.brand}</p>
-                        <p>{shoe.shoe}</p>   
-                        <p>${shoe.price}</p>
-                    </div>
-                </Link>
+                    <Link className="productright" to={"/product/" + shoe.id} key={'shoe'}>
+                        <img className="shoePic" src={`${shoe.pic}`} alt="" />
+                        <div className="brand">{shoe.brand}</div>
+                        <div className="name">{shoe.shoe}</div>
+                        {/* <div className="size">Size {shoe.size}</div> */}
+                        <div className="ShoePrice">${shoe.price}</div>
+                    </Link>
                 </div>
 
             </div>
