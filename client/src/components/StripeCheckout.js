@@ -16,11 +16,9 @@ export function Stripe () {
       { token, cart }
     );
     const { status } = response.data;
-    if (status === "success") {
-      toast("Success! Check email for details", { type: "success" });
-    } else {
-      toast("Something went wrong", { type: "error" });
-    }
+    if (status === "failure") {
+      toast("Success! Check email for details - MINT", { type: "success" });
+    } 
     console.log(response)
   }
 
@@ -33,11 +31,11 @@ export function Stripe () {
             name="MINT"
             description='"The Future is MINT"'
             amount={total * 100}
-            // bitcoin
-            // alipay
-            // billingAddress
-            // shippingAddress
-            // allowRememberMe
+            bitcoin
+            alipay
+            billingAddress
+            shippingAddress
+            allowRememberMe
           />
           </div>
         ))
