@@ -10,6 +10,7 @@ import Footer from "./Footer"
 import Main from "./Main"
 import TheGuys from "./TheGuys"
 import Form from "./form"
+import {Stripe} from "./StripeCheckout"
 
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
     <Router>
       <div className="container">
         <Header />
-
+        <Route path="/stripe" component={Stripe}/>
         <Route exact path="/form" component={Form} />
         <Route exact path="/" component={Main} />
         <Route path="/shoes" component={ShoesPage} />
