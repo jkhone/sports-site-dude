@@ -1,7 +1,7 @@
 /* ShoesPageFilter */
 
 .brandfiltercontainer {
-	width: 1000px;
+	width: 900px;
 	margin: auto;
 }
 
@@ -17,8 +17,7 @@
     
 .brandfilter {
 	display: flex;
-	justify-content: space-between;
-
+	justify-content: flex-start;
 	width: 100%;
 	/* margin: auto; */
 }

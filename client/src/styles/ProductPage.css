@@ -1,16 +1,62 @@
 .product {
-    width: 1000px;
-    height: 75vh;
-    margin: auto;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+	width: 100vh;
+	height: 86vh;
+	margin: auto;
+	display: flex;
+	align-items: center;
 }
 
 .productleft {
-    width: 50%;
+	width: 100%;
+	/* margin-right: 2px; */
 }
 
 .productleft img {
-    width: 500px;
+	width: 90%;
+}
+
+.productright{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	width: 35vh;
+}
+
+.brand{
+	font-size: 17px;
+	text-transform: uppercase;
+	font-weight: lighter;
+}
+
+.name{
+	font-size: 20px;
+	text-transform: uppercase;
+}
+
+.size{
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.ShoePrice{
+  font-size: 20px;
+	text-transform: uppercase;
+	color: #00FFDA;
+}
+
+.addToCart{
+	font-size: 20px;
+	width: 100%;
+	text-transform: uppercase;
+	color: #888;
+	background: transparent;
+	border: #888 1px solid;
+	font-family: 'Roboto Condensed', sans-serif;
+	outline: none;
+	cursor: pointer;
+}
+
+.addToCart:hover{
+	color: #333;
+	border: #333 1px solid;
 }

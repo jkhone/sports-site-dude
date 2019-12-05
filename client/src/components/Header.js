@@ -39,7 +39,7 @@ export default props => {
             </input>
           </div>
           <div className="header-item">
-            <Icon icon="shopping-cart" />
+            {/* <Icon icon="shopping-cart" /> */}
             <Cart />
           </div>
         </div>
