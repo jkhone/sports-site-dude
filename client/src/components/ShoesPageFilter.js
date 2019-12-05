@@ -2,7 +2,6 @@ import React from "react"
 import {brandFilter} from "./ShoesPageFilterImages"
 import "react-responsive-carousel/lib/styles/carousel.min.css"
 import "../styles/Filter.css"
-import { Link } from "react-router-dom"
 import { useShoes } from "../hooks"
 
 export default function() {
