@@ -3,6 +3,7 @@ import { usePlayers } from "../hooks"
 import { Link } from 'react-router-dom'
 import '../styles/Players.css'
 import TeamLogos from "./TeamLogosFilter.js"
+import PlayerSearch from "./PlayerSearch"
 
 export default props => {
   const { players } = usePlayers()
@@ -10,6 +11,7 @@ export default props => {
   return (
     <>
         <div><TeamLogos /></div>
+        <div><PlayerSearch /></div>
     
     <div id="playercontainer">
    
