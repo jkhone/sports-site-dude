@@ -1,0 +1,80 @@
+.formcontainer {
+    width: 1000px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.login, .register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    height: 400px;
+    margin: auto;
+    background: rgba(123, 123, 123, 0.25);
+    border: 1px solid black;
+    border-radius: 5px;
+    justify-content: center;
+}
+
+.login h1, .register h1 {
+    font-weight: lighter;
+}
+
+form div input {
+    width: 200px;
+    height: 25px;
+    margin: 5px;
+    outline: none;
+    padding: 5px;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+button {
+    height: 30px;
+    width: 70px;
+    border-radius: 3px; 
+    outline: none;
+    transition: background .5s;
+    border: 1px solid black;
+}
+
+button:hover {
+    background: rgb(99, 165, 247);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: background 1s;
+    padding: 5px;
+}
+
+a:hover {
+    background: lavender;
+    border-radius: 3px;
+}
+
+.register form, .login form {
+    display: flex;
+    flex-direction: column;
+    height: 60%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.app {
+    width: 1000px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}

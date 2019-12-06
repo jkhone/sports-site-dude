@@ -1,6 +1,11 @@
 const createError = require("http-errors")
 const express = require("express")
 const basketballRouter = require("./routes/basketball")
+// users
+const userRouter = require("./routes/users")
+const config = require('config')
+const jwt = require('express-jwt')
+const protectedRouter = require('./routes/protected')
 
 const app = express()
 
@@ -8,6 +13,9 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 
 app.use("/api", basketballRouter)
+// users
+app.use("/", userRouter)
+app.use("/", jwt({secret: config.get('secret')}), protectedRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
