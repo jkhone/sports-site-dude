@@ -23,8 +23,6 @@ export function Stripe () {
   }
 
   return (
-           cart.map(product => (
-            <div key={"cart-product" + product.id} className="stripeb">
             <StripeCheckout
             stripeKey="pk_test_0rdbLJpLl8NAja6TAjzY1EVO00pMamARW1"
             token={handleToken}
@@ -37,10 +35,6 @@ export function Stripe () {
             shippingAddress
             allowRememberMe
           />
-          </div>
-        ))
-      
-      
   );
 }
 
