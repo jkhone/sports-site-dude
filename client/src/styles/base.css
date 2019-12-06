@@ -80,14 +80,22 @@ header{
 /* FOOTER */
 /* SCORES */
 @keyframes customticker {
-  0% {
-    -webkit-transform: translate3d(100%, 0, 0);
+  from {
     transform: translate3d(100%, 0, 0);
-    visibility: visible;
   }
-  100% {
-    -webkit-transform: translate3d(-100%, 0, 0);
+  to {
     transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes customticker2 {
+  from {
+    -webkit-transform: translate3d(0%, 0, 0);
+    transform: translate3d(0%, 0, 0);
+  }
+  to {
+    -webkit-transform: translate3d(-200%, 0, 0);
+    transform: translate3d(-200%, 0, 0);
   }
 }
 
@@ -100,7 +108,7 @@ header{
   border-bottom: #888 1px solid;
 }
 
-.games {
+.games1 {
   display: flex;
   white-space: nowrap;
   -webkit-animation-iteration-count: infinite;
@@ -109,8 +117,22 @@ header{
   animation-timing-function: linear;
   -webkit-animation-name: customticker;
   animation-name: customticker;
-  -webkit-animation-duration: 30s;
-  animation-duration: 30s;
+  -webkit-animation-duration: 40s;
+  animation-duration: 40s;
+}
+
+.games2 {
+  display: flex;
+  white-space: nowrap;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-name: customticker2;
+  animation-name: customticker2;
+  -webkit-animation-duration: 40s;
+  animation-duration: 40s;
+  animation-delay: 20s;
 }
 
 .GAME{
