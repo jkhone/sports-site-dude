@@ -34,6 +34,16 @@ export default props => {
           </Link>
         </div>
         <div className="header-right">
+          <Link to="/login">
+            <div className="header-item">
+              LOGIN
+            </div>
+          </Link>
+          <Link to="/register">
+            <div className="header-item">
+              REGISTER
+            </div>
+          </Link>
           <div>
             <Icon icon="search"/>
             <input   
