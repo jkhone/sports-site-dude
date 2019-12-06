@@ -61,6 +61,7 @@ export const usePlayers = () => {
     const players = useSelector(appState => appState.playerState.players)
     const team = team => dispatch(getTeam(team))
     const playersearch = search =>dispatch(PlayerSearch(search))
+    const allPlayers = ()=> dispatch(getPlayers())
 
     const dispatch = useDispatch()
 
@@ -69,6 +70,6 @@ export const usePlayers = () => {
 
     },[dispatch])
 
-    return { players, team, playersearch }
+    return { players, team, playersearch, allPlayers }
 }
 

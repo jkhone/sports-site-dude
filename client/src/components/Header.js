@@ -3,8 +3,12 @@ import LOGO from "../assets/LOGO-01.png"
 import Icon from "../lib/Icon"
 import { Link } from "react-router-dom"
 import Cart from "./Cart"
+import { useShoes } from '../hooks'
+import { usePlayers } from '../hooks'
 
 export default props => {
+  const { show } = useShoes()
+  const { allPlayers } = usePlayers()
     return (
         <header>
         <div className="header-left">
@@ -13,12 +17,12 @@ export default props => {
             <img className="logo" src={LOGO} alt="whoops" />
           </div>
           </Link>
-          <Link to="/shoes">
+          <Link to="/shoes" onClick={show}>
             <div className="header-item">
               SHOES
             </div>
           </Link>
-          <Link to="/players">
+          <Link to="/players" onClick={allPlayers}>
             <div className="header-item">
               PLAYERS
             </div>

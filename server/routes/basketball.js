@@ -91,7 +91,7 @@ router.get("/shoes/search/:search", (request, response, next) => {
     const sql = `
     SELECT id, playerid, brand, shoe, size, color, pic, price
     FROM shoes
-    WHERE brand LIKE ?
+    WHERE brand LIKE ?  
     `
 
     db.query(sql, [search], (error, results, fields) => {
