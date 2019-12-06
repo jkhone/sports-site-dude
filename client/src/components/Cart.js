@@ -35,7 +35,7 @@ export default props => {
               <p className="count">Quantity: {product.quantity}</p>
             </div>
             <div className="price">
-              <p>${product.price.toFixed(2)}</p>
+              <p>${product.price}</p>
               <button className="cartButtons" onClick={e => update(e, product.id, -1)}>-</button>
               <button className="cartButtons" onClick={e => update(e, product.id, 1)}>+</button>
             </div>

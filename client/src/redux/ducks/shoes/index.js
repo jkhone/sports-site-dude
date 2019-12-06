@@ -68,10 +68,11 @@ export function useShoes() {
   const shoes = useSelector(appState => appState.shoesReducer.shoes)
   const shoesearch = search => dispatch(ShoeSearch(search))
   const brandShoes = brand => dispatch(getBrandShoes(brand))
+  const show = () => dispatch(showShoes())
 
   useEffect(() => {
     dispatch(showShoes())
   }, [dispatch])
 
-  return { shoes, brandShoes, shoesearch}
+  return { shoes, brandShoes, shoesearch, show}
 }
