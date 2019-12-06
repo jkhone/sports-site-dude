@@ -1,5 +1,7 @@
 import React, {useState} from "react"
 import { usePlayers } from "../hooks"
+import "../styles/base.css"
+import "../styles/Filter.css"
 
 
 
@@ -16,11 +18,12 @@ const PlayerSearch = props => {
 
 return(
     <>
-        <form onSubmit={handleSubmit}>
-            <input type="text" name="search" value={search} onChange={e=>setSearch(e.target.value)}/>
-        <button type="submit">Search</button>
+    <div className="brandfiltercontainer">
+        <form className="brandfilter" onSubmit={handleSubmit}>
+            <input className="searchBAR" placeholder="Search" type="text" name="search" value={search} onChange={e=>setSearch(e.target.value)}/>
+        {/* <button type="submit">Search</button> */}
         </form>
-
+    </div>
         {/* <div id="playercontainer">
     
             {players.map((players, i) => (
