@@ -19,12 +19,12 @@ function handleSubmit(e){
     return(
         <div className='formcontainer'>
             <div className='login'>
-                <Link to='/register' >Don't have an account? Register Here!</Link>
-                <h1>Login</h1>
+                {/* <Link to='/register' >Don't have an account? Register Here!</Link> */}
+                <div className="title">Login</div>
                 <form onSubmit={handleSubmit}>
                     <div>
-                        <label htmlFor='username' >Username</label>
-                        <input 
+                        <label className="UserPass" htmlFor='username' >Username</label>
+                        <input
                         type="text" 
                         name="username" 
                         value={username} 
@@ -32,7 +32,7 @@ function handleSubmit(e){
                         onChange={e => setUsername(e.target.value)}/> 
                     </div>
                     <div>
-                        <label htmlFor='password'>Password</label>
+                        <label className="UserPass" htmlFor='password'>Password</label>
                         <input 
                         type="password" 
                         name="password" 
@@ -40,7 +40,7 @@ function handleSubmit(e){
                         required
                         onChange={e => setPassword(e.target.value)}/> 
                     </div>
-                    <button type="submit">Login</button>
+                    <button className="LogReg" type="submit">Login</button>
                 </form>
             </div>
         </div>

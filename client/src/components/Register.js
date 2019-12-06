@@ -20,11 +20,11 @@ export default props => {
     return (
         <div className='formcontainer'>
             <div className='register'>
-                <Link to='/login' >Already have an account? Login Here!</Link>
-                <h1>Register</h1>
+                {/* <Link to='/login' >Already have an account? Login Here!</Link> */}
+                <div className="title">Register</div>
                 <form onSubmit={handleSubmit}>
                     <div>
-                    <label htmlFor='username' >Username</label>
+                    <label className="UserPass" htmlFor='username' >Username</label>
                     <input
                         type='text'
                         name='username'
@@ -35,7 +35,7 @@ export default props => {
                     />
                     </div>
                     <div>
-                    <label htmlFor='password'>Password</label>
+                    <label className="UserPass" htmlFor='password'>Password</label>
                     <input 
                         name='password'
                         id='password'
@@ -44,7 +44,7 @@ export default props => {
                         onChange={e => setPassword(e.target.value)}
                     />
                     </div>
-                    <button type='submit' >Register</button>
+                    <button className="LogReg" type='submit' >Register</button>
                 </form>
             </div>
         </div>

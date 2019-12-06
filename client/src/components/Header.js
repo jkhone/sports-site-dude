@@ -44,14 +44,14 @@ export default props => {
               REGISTER
             </div>
           </Link>
-          <div>
+          {/* <div>
             <Icon icon="search"/>
             <input   
               className="searchBAR"
               type="text" 
               placeholder="Search">
             </input>
-          </div>
+          </div> */}
           <div className="header-item">
             <Cart />
           </div>

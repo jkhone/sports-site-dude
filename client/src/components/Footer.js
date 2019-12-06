@@ -5,7 +5,94 @@ export default props => {
     return (
         <footer>
           <div className="scoreBar">
-            <div className="games">
+            <div className="games1">
+
+              <div className="GAME">
+                <div className="WIN">
+                  Bulls - 110
+                </div>
+                <div className="LOSS">
+                  Wizards - 100
+                </div>
+              </div>
+
+              <div className="GAME">            
+                <div className="WIN">
+                  Hornets - 110
+                </div>          
+                <div className="LOSS">
+                  Cavaliers - 100
+                </div>
+              </div>
+
+              <div className="GAME">            
+                <div className="WIN">
+                  Heat - 110
+                </div>          
+                <div className="LOSS">
+                  76ers - 100
+                </div>
+              </div>
+
+              <div className="GAME">
+                <div className="WIN">
+                  Raptors - 110
+                </div>
+                <div className="LOSS">
+                  Pistons - 100
+                </div>
+              </div>
+
+              <div className="GAME">
+                <div className="WIN">
+                  Pelicans - 110
+                </div>
+                <div className="LOSS">
+                  Timberwolves - 100
+                </div>
+              </div>
+
+              <div className="GAME">
+                <div className="WIN">
+                  Grizzlies - 110
+                </div>
+                <div className="LOSS">
+                  Thunder - 100
+                </div>
+              </div>
+
+              <div className="GAME">
+                <div className="WIN">
+                  Magic - 110
+                </div>
+                <div className="LOSS">
+                  Nuggets - 100
+                </div>
+              </div>
+
+              <div className="GAME">
+                <div className="WIN">
+                  Celtics - 110
+                </div>
+                <div className="LOSS">
+                  Mavericks - 100
+                </div>
+              </div>
+
+              <div className="GAME">
+                <div className="LOSS">
+                  Golden State - 100
+                </div>
+                <div className="WIN">
+                  Trail Blazers - 110
+                </div>
+              </div>
+
+              
+
+            </div> {/* games */}
+
+            <div className="games2">
 
               <div className="GAME">
                 <div className="WIN">
