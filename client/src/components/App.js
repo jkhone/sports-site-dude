@@ -12,6 +12,9 @@ import TheGuys from "./TheGuys"
 import Form from "./form"
 import PlayerSearch from "./PlayerSearch"
 import {Stripe} from "./StripeCheckout"
+import BrandPage from "./BrandPage"
+import TeamPage from "./TeamPage"
+
 
 
 
@@ -25,9 +28,11 @@ function App() {
         <Route exact path="/form" component={Form} />
         <Route exact path="/" component={Main} />
         <Route path="/shoes" component={ShoesPage} />
+        <Route path="/shoes/:brandId" component={BrandPage} />
         <Route path="/product/:id" component={ProductPage} />
         <Route path="/players" component={Players} />
         <Route path="/player/:id" component={PlayerPage} />
+        <Route path="/players/:team" component={TeamPage} />
         <Route path="/MVPs" component={TheGuys}/>
         <Footer />    
       </div>
