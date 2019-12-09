@@ -24,21 +24,18 @@ export function Stripe () {
   }
 
   return (
-    <div>
-      <StripeCheckout
-      stripeKey="pk_test_0rdbLJpLl8NAja6TAjzY1EVO00pMamARW1"
-      token={handleToken}
-      name="MINT"
-      className="checkout"
-      description='"The Future is MINT"'
-      amount={total * 100}
-      bitcoin
-      alipay
-      billingAddress
-      shippingAddress
-      allowRememberMe
-      />
-    </div>
-  )
+            <StripeCheckout
+            stripeKey="pk_test_0rdbLJpLl8NAja6TAjzY1EVO00pMamARW1"
+            token={handleToken}
+            name="MINT"
+            description='"The Future is MINT"'
+            amount={total * 100}
+            bitcoin
+            alipay
+            billingAddress
+            shippingAddress
+            allowRememberMe
+          />
+  );
 }
 

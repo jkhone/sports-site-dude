@@ -1,12 +1,30 @@
-
 button.StripeCheckout {
   width: 100%;
-  background: #888;
+  background: none !important;
   text-transform: uppercase;
   font-weight: lighter;
   color: #333;
+  font-size: 20px !important;
+  font-family: "Roboto Condensed", sans-serif !important;
+  border-radius: 0 !important;
+  border: 1px solid #333 !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+button.StripeCheckout:hover {transform: scale(1.025);}
+
+button.StripeCheckout span {
+  background-image: none !important;
+  background: #888;
+  text-transform: uppercase;
   cursor: pointer;
-  font-size: 1em;
-  border: #333 1px solid;
-  font-family: 'Roboto Condensed', sans-serif;
+  border: #333 1px solid !important;
+  font-family: "Roboto Condensed", sans-serif !important;
+  border-radius: 0 !important;
+  font-weight: lighter !important;
+  font-size: 20px !important;
+  color: #333 !important;
+  display: contents !important;
+  outline: none !important;
 }

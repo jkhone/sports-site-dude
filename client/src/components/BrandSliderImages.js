@@ -27,9 +27,6 @@ export const brandImages = [
     // img: "https://logoeps.com/wp-content/uploads/2011/05/asics-logo-vector-01.png",
     // url: "/brand/7"
     // },
-    // {
-    // img: "https://i.pinimg.com/originals/84/d2/78/84d278ec0173547655b1cd3a84442819.jpg",
-    // url: "/brand/8"   
-    // }
+    
    
   ];
