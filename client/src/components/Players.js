@@ -14,8 +14,8 @@ export default props => {
     <div id="playercontainer">
    
       {players.map((players, i) => (
-      <div id="profile">
-      <Link to={"/player/" + players.id} key={'player' + i}>
+      <div id="profile"  key={'player' + i} >
+      <Link to={"/player/" + players.id}>
         <div className="player">
           <img className="playerImg" src={`${players.url}`} alt="" />
           <div className="playerDesc">

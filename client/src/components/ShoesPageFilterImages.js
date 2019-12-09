@@ -26,18 +26,18 @@ export const brandFilter = [
       name: "Adidas"
     },
     {
-      id:"5",
+      id:"6",
       img: "https://upload.wikimedia.org/wikipedia/en/thumb/3/37/Jumpman_logo.svg/1200px-Jumpman_logo.svg.png",
       name: "Jordan"
 
     },
     {
-      id:"6",
+      id:"7",
       img: "https://logoeps.com/wp-content/uploads/2011/05/asics-logo-vector-01.png",
       name: "Asics"
     },
     {
-      id:"7",
+      id:"8",
       img: "https://i.pinimg.com/originals/84/d2/78/84d278ec0173547655b1cd3a84442819.jpg",
       name: "Converse"   
     }

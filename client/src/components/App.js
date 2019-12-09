@@ -11,6 +11,7 @@ import Main from "./Main"
 import TheGuys from "./TheGuys"
 import Form from "./form"
 import {Stripe} from "./StripeCheckout"
+import Dev from "./MeetTheDev"
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
         <Route path="/players" component={Players} />
         <Route path="/player/:id" component={PlayerPage} />
         <Route path="/MVPs" component={TheGuys}/>
+        <Route path="/thedevs" component={Dev}/>
         <Footer />    
       </div>
     </Router>
