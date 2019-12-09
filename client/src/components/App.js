@@ -10,7 +10,6 @@ import Footer from "./Footer"
 import Main from "./Main"
 import TheGuys from "./TheGuys"
 import Form from "./form"
-import PlayerSearch from "./PlayerSearch"
 import {Stripe} from "./StripeCheckout"
 import Login from './Login'
 import Register from './Register'
@@ -37,7 +36,7 @@ function App() {
         <Route path='/register' component={Register} />
 
         {isAuthenticated ? 
-          <Route path="/profile/:username" component={Profile} /> : ""
+          <Route path="/profiles/:username" component={Profile} /> : ""
         }
 
         <Footer />    

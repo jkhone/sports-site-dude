@@ -1,9 +1,10 @@
 import React, { useState } from "react"
 import { useAuth } from "../hooks"
-// import { useProfile } from "../hooks"
+import { useProfile } from "../hooks"
 import firebase from "firebase"
 import FileUploader from "react-firebase-file-uploader"
 import LoadingOverlay from 'react-loading-overlay'
+import "../styles/Profile.css" 
 
 const firebaseConfig = {
     apiKey: "AIzaSyCYB4M49C3bgeyS0KM2Uq6ThgEkybLSjlQ",
@@ -21,7 +22,7 @@ firebase.analytics()
 
 export default props => {
     const { username } = useAuth()
-    // const { profilepic, addProfile } = useProfile()
+    const { profilepic, addProfile } = useProfile()
     const [pic, setPic] = useState()
     const [fileName, setFileName] = useState('')
     const [isUploading, setIsUploading] = useState(false)
@@ -45,15 +46,12 @@ export default props => {
           .getDownloadURL()
           .then(url => {
               setPic(url)
-            //   addProfile({
-            //       username: username,
-            //       picurl: url
-            //   })
+              addProfile(url)
             })
     }
 
     return (
-        <div>
+        <div className= "profile">
             <LoadingOverlay
             active={isUploading}
             spinner
@@ -69,10 +67,10 @@ export default props => {
             onUploadError={handleUploadError}
             onUploadSuccess={handleUploadSuccess}
             onProgress={handleProgress}
-            value={fileName}
             />
-            {/* <img src={profilepic[0]} alt="Set a Pic!" /> */}
-            <img src={pic} alt="Set a Pic!" />
+            <div className="profilepic" >
+                <img src={profilepic} alt="Set a Pic!" />
+            </div>
         </div>
     )
 

@@ -40,7 +40,7 @@ export default props => {
         <div className="header-right">
           {isAuthenticated ? 
             <>
-              <Link to={"/profile/" + username}>
+              <Link to={"/profiles/" + username}>
                 <div className="header-item">
                   PROFILE
                 </div>

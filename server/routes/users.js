@@ -62,51 +62,36 @@ router.post('/login', (req, res, next) => {
 })
 
 // profiles
-const profilePic = []
 
-router.post("/profilePic", (req, res, next) => {
-  const id = going.length + 1
-  const username = req.body.username
-  username.id = id
+router.post("/profiles", (req, res, next) => {
+  const picurl = req.body.picurl
 
-  profilePic.push(username)
-  res.json(username)
+  const sql = `INSERT INTO users (picurl) VALUES (?) WHERE username = ?`
+
+  db.query(sql, [picurl], (err, results, fields) => {
+    if (err) {
+      throw new Error(err)
+    }
+
+    res.json({
+      message: 'pic inserted',
+      results
+    })
+  })
 })
 
-router.get("/profilePic", (req, res, next) => {
-  res.json(profilePic)
+router.get("/profiles/:username", (req, res, next) => {
+  const username = req.params.username
+
+  const sql = `
+  SELECT picurl
+  FROM users
+  WHERE username = ? 
+  `
+
+  db.query(sql, [username], (error, results, fields) => {
+      response.json(results)
+  })
 })
-
-// MIGHT COME BACK TO THIS FOR POSTING PROFILE PICS
-// router.post("/profiles", (req, res, next) => {
-//   const picurl = req.body.picurl
-
-//   const sql = `INSERT INTO users (picurl) VALUES (?) WHERE username = ?`
-
-//   db.query(sql, [picurl], (err, results, fields) => {
-//     if (err) {
-//       throw new Error(err)
-//     }
-
-//     res.json({
-//       message: 'pic inserted',
-//       results
-//     })
-//   })
-// })
-
-// router.get("/profiles/:username", (req, res, next) => {
-//   const username = req.params.username
-
-//   const sql = `
-//   SELECT picurl
-//   FROM users
-//   WHERE username = ? 
-//   `
-
-//   db.query(sql, [username], (error, results, fields) => {
-//       response.json(results)
-//   })
-// })
 
 module.exports = router
