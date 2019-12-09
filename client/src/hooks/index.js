@@ -4,3 +4,4 @@ export { useBrands } from "../redux/ducks/brands"
 export { useCart } from "../redux/ducks/cart"
 export { useAuth } from '../redux/ducks/auth'
 export { useCreateUser } from '../redux/ducks/register'
+export { useProfile } from "../redux/ducks/profile"

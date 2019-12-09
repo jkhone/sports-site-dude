@@ -14,9 +14,12 @@ import PlayerSearch from "./PlayerSearch"
 import {Stripe} from "./StripeCheckout"
 import Login from './Login'
 import Register from './Register'
-
+import Profile from "./Profile"
+import { useAuth } from "../hooks"
 
 function App() {
+  const { isAuthenticated } = useAuth()
+
   return (
 
     <Router>
@@ -32,6 +35,11 @@ function App() {
         <Route path="/MVPs" component={TheGuys}/>
         <Route path='/login' component={Login} />
         <Route path='/register' component={Register} />
+
+        {isAuthenticated ? 
+          <Route path="/profile/:username" component={Profile} /> : ""
+        }
+
         <Footer />    
       </div>
     </Router>
