@@ -45,7 +45,7 @@ export const useProfile = () => {
     const dispatch = useDispatch()
 
     useEffect(() => {
-        dispatch(getProfile())
+        dispatch(getProfile(username))
 
     },[dispatch])
 

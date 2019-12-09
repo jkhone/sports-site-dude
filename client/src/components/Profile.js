@@ -45,6 +45,7 @@ export default props => {
           .child(filename)
           .getDownloadURL()
           .then(url => {
+              console.log(url)
               setPic(url)
               addProfile(url)
             })
