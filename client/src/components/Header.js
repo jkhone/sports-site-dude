@@ -1,23 +1,28 @@
 import React from "react"
+import LOGO from "../assets/LOGO-01.png"
 import Icon from "../lib/Icon"
 import { Link } from "react-router-dom"
 import Cart from "./Cart"
+import { useShoes } from '../hooks'
+import { usePlayers } from '../hooks'
 
 export default props => {
+  const { show } = useShoes()
+  const { allPlayers } = usePlayers()
     return (
         <header>
         <div className="header-left">
           <Link to="/">
           <div>
-            <img className="logo" src="https://firebasestorage.googleapis.com/v0/b/sports-site-dude.appspot.com/o/LOGO-01.jpg?alt=media&token=0d520d79-6189-44fc-b26b-91754466d3bb" alt="whoops" />
+            <img className="logo" src={LOGO} alt="whoops" />
           </div>
           </Link>
-          <Link to="/shoes">
+          <Link to="/shoes" onClick={show}>
             <div className="header-item">
               SHOES
             </div>
           </Link>
-          <Link to="/players">
+          <Link to="/players" onClick={allPlayers}>
             <div className="header-item">
               PLAYERS
             </div>
@@ -29,14 +34,24 @@ export default props => {
           </Link>
         </div>
         <div className="header-right">
-          <div>
+          <Link to="/login">
+            <div className="header-item">
+              LOGIN
+            </div>
+          </Link>
+          <Link to="/register">
+            <div className="header-item">
+              REGISTER
+            </div>
+          </Link>
+          {/* <div>
             <Icon icon="search"/>
             <input   
               className="searchBAR"
               type="text" 
               placeholder="Search">
             </input>
-          </div>
+          </div> */}
           <div className="header-item">
             <Cart />
           </div>

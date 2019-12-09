@@ -4,7 +4,8 @@ import axios from "axios";
 import {toast} from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useCart } from "../hooks"
-import "../styles/Stripe.css"
+// import "../styles/Stripe.css"
+import "../styles/Cart.css"
 toast.configure();
 
 export function Stripe () {

@@ -4,6 +4,7 @@ import "../styles/ShoesPage.css"
 import "../styles/Players.css"
 import { Link } from 'react-router-dom'
 import ProductFilter from "./ShoesPageFilter"
+import ShoeSearch from "./ShoeSearch"
 
 export default props => {
     const { shoes } = useShoes()
@@ -11,6 +12,7 @@ export default props => {
     return (
         <>
         <div><ProductFilter/></div>
+        <div><ShoeSearch /></div>
 
         <div id="playercontainer">
             {shoes.map((shoe, i) => (

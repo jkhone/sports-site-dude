@@ -10,8 +10,11 @@ import Footer from "./Footer"
 import Main from "./Main"
 import TheGuys from "./TheGuys"
 import Form from "./form"
+import PlayerSearch from "./PlayerSearch"
 import {Stripe} from "./StripeCheckout"
 import Dev from "./MeetTheDev"
+import Login from './Login'
+import Register from './Register'
 
 
 function App() {
@@ -20,16 +23,18 @@ function App() {
     <Router>
       <div className="container">
         <Header />
-        <Route path="/stripe" component={Stripe}/>
-        <Route exact path="/form" component={Form} />
-        <Route exact path="/" component={Main} />
-        <Route path="/shoes" component={ShoesPage} />
-        <Route path="/product/:id" component={ProductPage} />
-        <Route path="/players" component={Players} />
-        <Route path="/player/:id" component={PlayerPage} />
-        <Route path="/MVPs" component={TheGuys}/>
-        <Route path="/thedevs" component={Dev}/>
-        <Footer />    
+          <Route path="/stripe" component={Stripe}/>
+          <Route exact path="/form" component={Form} />
+          <Route exact path="/" component={Main} />
+          <Route path="/shoes" component={ShoesPage} />
+          <Route path="/product/:id" component={ProductPage} />
+          <Route path="/players" component={Players} />
+          <Route path="/player/:id" component={PlayerPage} />
+          <Route path="/MVPs" component={TheGuys}/>
+          <Route path="/thedevs" component={Dev}/>
+          <Route path='/login' component={Login} />
+          <Route path='/register' component={Register} />
+        <Footer/>    
       </div>
     </Router>
   )

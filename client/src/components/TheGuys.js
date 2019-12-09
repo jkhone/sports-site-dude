@@ -1,6 +1,7 @@
 import React from 'react' 
 import { Link } from 'react-router-dom'
 import '../styles/TheGuys.css'
+import { LazyLoadComponent } from 'react-lazy-load-image-component'
 
 export default props => {
 
@@ -22,65 +23,67 @@ export default props => {
   const Green2 = "https://firebasestorage.googleapis.com/v0/b/sports-site-dude.appspot.com/o/The%20Guys%2FdraymondGreen2.jpg?alt=media&token=7f9d4814-3118-47b1-8d0e-a368121229dd"
 
   return (
-    <div className="cont">
-      <div className="row">
-        <div className="column1">
-          <Link to={"/player/10"}>
-            <img className="galleryImg" src={Curry3} alt="whoops"/>
-          </Link>
-          <Link to={"/player/17"}>
-            <img className="galleryImg" src={Kawhi2} alt="whoops"/>
-          </Link>
-          <Link to={"/player/7"}>
-            <img className="galleryImg" src={JHarden} alt="whoops"/>
-          </Link>
-          <Link to={"/player/16"}>
-            <img className="galleryImg" src={PGeorge} alt="whoops"/>
-          </Link>
-        </div>
-        <div className="column2">
-          <Link to={"/player/13"}>
-            <img className="galleryImg" src={Giannis} alt="whoops"/>
-          </Link>
-          <Link to={"/player/1"}>
-            <img className="galleryImg" src={Lebron2} alt="whoops"/>
-          </Link>
-          <Link to={"/player/10"}>
-            <img className="galleryImg" src={Curry1} alt="whoops"/>
-          </Link>
-          <Link to={"/player/11"}>
-            <img className="galleryImg" src={Green} alt="whoops"/>
-          </Link>
-        </div>
-        <div className="column2">
-          <Link to={"/player/13"}>
-            <img className="galleryImg" src={Giannis2} alt="whoops"/>
-          </Link>
-          <Link to={"/player/11"}>
-            <img className="galleryImg" src={Green2} alt="whoops"/>
-          </Link>
-          <Link to={"/player/4"}>
-            <img className="galleryImg" src={Kemba} alt="whoops"/>
-          </Link>
-          <Link to={"/player/10"}>
-            <img className="galleryImg" src={Curry2} alt="whoops"/>
-          </Link>
-        </div>
-        <div className="column2">
-          <Link to={"/player/17"}>
-            <img className="galleryImg" src={Kawhi3} alt="whoops"/>
-          </Link>
-          <Link to={"/player/4"}>
-            <img className="galleryImg" src={Kemba2} alt="whoops"/>
-          </Link>
-          <Link to={"/player/17"}>
-            <img className="galleryImg" src={Kawhi} alt="whoops"/>
-          </Link>
-          <Link to={"/player/1"}>
-            <img className="galleryImg" src={Lebron} alt="whoops"/>
-          </Link>
+    <LazyLoadComponent>
+      <div className="cont">
+        <div className="row">
+          <div className="column1">
+            <Link to={"/player/10"}>
+              <img className="galleryImg" src={Curry3} alt="whoops"/>
+            </Link>
+            <Link to={"/player/17"}>
+              <img className="galleryImg" src={Kawhi2} alt="whoops"/>
+            </Link>
+            <Link to={"/player/7"}>
+              <img className="galleryImg" src={JHarden} alt="whoops"/>
+            </Link>
+            <Link to={"/player/16"}>
+              <img className="galleryImg" src={PGeorge} alt="whoops"/>
+            </Link>
+          </div>
+          <div className="column2">
+            <Link to={"/player/13"}>
+              <img className="galleryImg" src={Giannis} alt="whoops"/>
+            </Link>
+            <Link to={"/player/1"}>
+              <img className="galleryImg" src={Lebron2} alt="whoops"/>
+            </Link>
+            <Link to={"/player/10"}>
+              <img className="galleryImg" src={Curry1} alt="whoops"/>
+            </Link>
+            <Link to={"/player/11"}>
+              <img className="galleryImg" src={Green} alt="whoops"/>
+            </Link>
+          </div>
+          <div className="column2">
+            <Link to={"/player/13"}>
+              <img className="galleryImg" src={Giannis2} alt="whoops"/>
+            </Link>
+            <Link to={"/player/11"}>
+              <img className="galleryImg" src={Green2} alt="whoops"/>
+            </Link>
+            <Link to={"/player/4"}>
+              <img className="galleryImg" src={Kemba} alt="whoops"/>
+            </Link>
+            <Link to={"/player/10"}>
+              <img className="galleryImg" src={Curry2} alt="whoops"/>
+            </Link>
+          </div>
+          <div className="column2">
+            <Link to={"/player/17"}>
+              <img className="galleryImg" src={Kawhi3} alt="whoops"/>
+            </Link>
+            <Link to={"/player/4"}>
+              <img className="galleryImg" src={Kemba2} alt="whoops"/>
+            </Link>
+            <Link to={"/player/17"}>
+              <img className="galleryImg" src={Kawhi} alt="whoops"/>
+            </Link>
+            <Link to={"/player/1"}>
+              <img className="galleryImg" src={Lebron} alt="whoops"/>
+            </Link>
+          </div>
         </div>
       </div>
-    </div>
-    )
+    </LazyLoadComponent>
+  )
 }
