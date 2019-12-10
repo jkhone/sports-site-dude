@@ -14,7 +14,7 @@ export default props => {
     useEffect(() =>{
         console.log(props)
         
-    brandShoes(brandId)
+        brandShoes(brandId)
 
     }, [brandId])
 

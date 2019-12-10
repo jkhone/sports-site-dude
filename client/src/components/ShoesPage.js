@@ -7,13 +7,9 @@ import ProductFilter from "./ShoesPageFilter"
 import ShoeSearch from "./ShoeSearch"
 
 export default props => {
-    const { shoes, show } = useShoes()
+    const { shoes } = useShoes()
 
-    useEffect(() =>{
-    
-        show()
-    
-        }, [])
+  
 
     return (
         <>

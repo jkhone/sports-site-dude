@@ -5,15 +5,11 @@ import "../styles/Filter.css"
 import { Link } from "react-router-dom"
 import { useShoes } from "../hooks"
 
-
 export default function() {
     const { brandShoes } = useShoes()
 
-
-
     return (
         <div className="brandfiltercontainer">
-
         <div className="brandfilter">
             {brandFilter.map((brand, i) => (
                 <div key={"brand" + i}>
@@ -25,9 +21,6 @@ export default function() {
                 </div>
             ))}
         </div>
-
         </div>
     )
 }
-
-// 
