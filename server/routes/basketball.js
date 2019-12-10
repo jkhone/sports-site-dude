@@ -57,7 +57,7 @@ router.get("/players/search/:search", (request, response, next) => {
 })
 
 router.get("/players/:id", (request, response, next) => {
-    console.log("hello")
+
     const id = request.params.id
     const sql = `
     SELECT id, player, team, url
@@ -73,14 +73,13 @@ router.get("/players/:id", (request, response, next) => {
 
 
 router.get("/shoes", (request, response, next) => {
-    console.log("hello")
     const sql = `
     SELECT id, playerid, brand, shoe, size, color, pic, price
     FROM shoes
     `
 
     db.query(sql, (error, results, fields) => {
-        console.log("success")
+        console.log(results)
         response.json(results)
     })
 })

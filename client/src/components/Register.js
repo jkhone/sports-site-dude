@@ -21,7 +21,7 @@ export default props => {
         <div className='formcontainer'>
             <div className='register'>
                 {/* <Link to='/login' >Already have an account? Login Here!</Link> */}
-                <div className="title">Register</div>
+                <div className="title">SIGN UP</div>
                 <form onSubmit={handleSubmit}>
                     <div>
                     <label className="UserPass" htmlFor='username' >Username</label>
@@ -44,7 +44,7 @@ export default props => {
                         onChange={e => setPassword(e.target.value)}
                     />
                     </div>
-                    <button className="LogReg" type='submit' >Register</button>
+                    <button className="LogReg" type='submit' >SIGN UP</button>
                 </form>
             </div>
         </div>
