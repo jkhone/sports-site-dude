@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect} from 'react'
 import { useShoes } from "../hooks"
 import "../styles/ShoesPage.css"
 import "../styles/Players.css"
@@ -7,12 +7,19 @@ import ProductFilter from "./ShoesPageFilter"
 import ShoeSearch from "./ShoeSearch"
 
 export default props => {
-    const { shoes } = useShoes()
+    const { shoes, show } = useShoes()
+
+    useEffect(() =>{
+    
+        show()
+    
+        }, [])
 
     return (
         <>
         <div><ProductFilter/></div>
         <div><ShoeSearch /></div>
+     
 
         <div id="playercontainer">
             {shoes.map((shoe, i) => (

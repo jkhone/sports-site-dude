@@ -1,30 +1,29 @@
-import React, { useState, useEffect} from 'react'
+import React, { useEffect} from 'react'
 import "../styles/ShoesPage.css"
 import "../styles/Players.css"
-import { Link } from 'react-router-dom'
-import ProductFilter from "./ShoesPageFilter"
-import ShoeSearch from "./ShoeSearch"
-import Axios from 'axios'
+import { useShoes } from "../hooks"
+
+
 
 
 export default props => {
-    const brandId = props.match.params.brand
-    const [shoes, setShoes] = useState([])
+    const { brandShoes } = useShoes()
+    const brandId = props.match.params.brandId
+  
 
     useEffect(() =>{
+        console.log(props)
         
-        Axios.get(`/shoes/brands/+${brandId}`).then(res=>
-            setShoes(res.data)
-        )
+    brandShoes(brandId)
 
     }, [brandId])
+
+  
     
     return (
         <>
-        {/* <div><ProductFilter/></div>
-        <div><ShoeSearch /></div> */}
-
-        <div id="playercontainer">
+      
+        {/* <div id="playercontainer">
             {shoes.map((shoe, i) => (
                 <Link to={"/product/" + shoe.id} key={'shoe' + i}>
                     <div className="player">
@@ -38,7 +37,7 @@ export default props => {
                 </Link>
             ))}
 
-        </div>
+        </div> */}
         </>
     )
 }

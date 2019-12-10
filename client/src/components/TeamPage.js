@@ -2,27 +2,24 @@ import React, { useState, useEffect} from 'react'
 import "../styles/ShoesPage.css"
 import "../styles/Players.css"
 import { Link } from 'react-router-dom'
-import ProductFilter from "./ShoesPageFilter"
-import ShoeSearch from "./ShoeSearch"
-import Axios from 'axios'
+import { usePlayers } from "../hooks"
+
 
 export default props => {
     const teamId = props.match.params.team
-    const [players, setPlayers] = useState([])
+    const { team, players } = usePlayers()
+
 
     useEffect(() =>{
-        Axios.get(`/players/team/+${teamId}`).then(res=>
-            setPlayers(res.data)
-        )
-
+        team(teamId)
+        console.log(teamId)
     }, [teamId])
 
     return (
         <>
-        {/* <div><ProductFilter/></div>
-        <div><ShoeSearch /></div> */}
+  
 
-        <div id="playercontainer">
+        {/* <div id="playercontainer">
         
         {players.map((players, i) => (
         <div id="profile">
@@ -38,7 +35,7 @@ export default props => {
         </div>
             )) }
 
-        </div>
+        </div> */}
         </>
     )
 }

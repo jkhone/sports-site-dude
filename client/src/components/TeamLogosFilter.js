@@ -7,13 +7,13 @@ import { Link } from "react-router-dom"
 
 export default function() {
     const { team } = usePlayers()
+   
     return (
         <div className="brandfiltercontainer">
-
         <div className="brandfilter">
             {teamFilter.map((logo, i) => (
                 <div key={"logo" + i}>
-                    <Link to={"/players/team/"+logo.name}>
+                    <Link to={"/players/"+logo.name}>
                         <div onClick={e=> team(logo.name)}>
                             <img src={`${logo.img}`} alt="whoops" />
                         </div>
@@ -21,7 +21,6 @@ export default function() {
                 </div> 
             ))}
         </div>
-
         </div>
     )
 }
