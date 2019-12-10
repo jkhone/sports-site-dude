@@ -199,3 +199,12 @@ header{
 .brandshome img {
   max-height: 200px;
 }
+
+/* Social Icons */
+
+.socialmedia button {filter: grayscale(100%);}
+
+span.aws-btn__wrapper{filter: grayscale(100%);
+transition: .5s;}
+
+span.aws-btn__wrapper:hover {filter: grayscale(0);}

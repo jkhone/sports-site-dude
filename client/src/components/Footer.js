@@ -1,5 +1,6 @@
 import React from "react"
 import Icon from "../lib/Icon"
+import Social from "./MintSocial"
 
 export default props => {
     return (
@@ -236,6 +237,9 @@ export default props => {
                 <div className="social-icon">
                   <Icon icon="facebook" />
                 </div>
+              </div>
+              <div className="socialmedia">
+                < Social/>
               </div>
           </div>
         </footer>

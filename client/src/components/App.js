@@ -15,6 +15,8 @@ import {Stripe} from "./StripeCheckout"
 import Dev from "./MeetTheDev"
 import Login from './Login'
 import Register from './Register'
+import SocialLinks from "./MintSocial"
+import ShareIcons from "./PlayerSocials"
 
 
 function App() {
@@ -34,6 +36,9 @@ function App() {
           <Route path="/thedevs" component={Dev}/>
           <Route path='/login' component={Login} />
           <Route path='/register' component={Register} />
+          <Route path='/social' component={SocialLinks} />
+          <Route path='/test' component={ShareIcons}/>
+
         <Footer/>    
       </div>
     </Router>
