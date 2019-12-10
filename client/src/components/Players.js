@@ -24,6 +24,7 @@ export default props => {
             <div className="teamName">{players.team}</div>
             <div className="playerName">{players.player}</div>
           </div>
+          </div>
         </Link>
   	  </div>
         ))}

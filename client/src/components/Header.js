@@ -41,7 +41,7 @@ export default props => {
           </Link>
           <Link to="/register">
             <div className="header-item">
-              REGISTER
+              SIGN UP
             </div>
           </Link>
           {/* <div>
