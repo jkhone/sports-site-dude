@@ -30,7 +30,6 @@ export default (state= initialState, action) =>{
 const getPlayers = () => {
     return dispatch => {
         axios.get("/api/players").then(resp => {
-            console.log('data', resp.data)
             dispatch({
                 type: GET_PLAYERS,
                 payload: resp.data

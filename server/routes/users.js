@@ -30,16 +30,13 @@ router.post('/login', (req, res, next) => {
 
   db.query('SELECT salt FROM users WHERE username = ?', [username], (err, results, fields) => {
     if (results.length > 0 ) {
-      console.log(results)
       password = sha512(password + results[0].salt)
-      console.log(password)
 
       const sql = `
       SELECT COUNT(1) as count FROM users WHERE username = ? AND password = ?
       `
 
       db.query(sql, [username, password], (err, results, fields) => {
-        console.log(results)
         if (results[0].count > 0) {
           const token = jwt.sign({username}, config.get('secret'))
 

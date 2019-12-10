@@ -91,7 +91,6 @@ router.get("/shoes", (request, response, next) => {
     `
 
     db.query(sql, (error, results, fields) => {
-        console.log(results)
         response.json(results)
     })
 })
