@@ -1,6 +1,5 @@
 import React, { useState} from 'react'
 import { useCreateUser } from '../hooks'
-import { Link } from 'react-router-dom'
 
 export default props => {
     const [username, setUsername] = useState('')
@@ -20,7 +19,6 @@ export default props => {
     return (
         <div className='formcontainer'>
             <div className='register'>
-                {/* <Link to='/login' >Already have an account? Login Here!</Link> */}
                 <div className="title">Register</div>
                 <form onSubmit={handleSubmit}>
                     <div>
@@ -44,7 +42,7 @@ export default props => {
                         onChange={e => setPassword(e.target.value)}
                     />
                     </div>
-                    <button className="LogReg" type='submit' >Register</button>
+                    <button className="LogReg" type='submit' >SIGN UP</button>
                 </form>
             </div>
         </div>

@@ -1,6 +1,5 @@
 import React, { useState } from "react"
 import { useAuth } from '../hooks'
-import { Link } from 'react-router-dom'
 import '../styles/login.css'
 
 export default function Login(props){
@@ -19,7 +18,6 @@ function handleSubmit(e){
     return(
         <div className='formcontainer'>
             <div className='login'>
-                {/* <Link to='/register' >Don't have an account? Register Here!</Link> */}
                 <div className="title">Login</div>
                 <form onSubmit={handleSubmit}>
                     <div>

@@ -28,7 +28,7 @@ export default props => {
     return (
         <div>
             <div className='playerprofile'>
-                 <div className="productleft">
+                <div className="productleft">
                     <img src={player.url} alt=''/>
                 </div>
                 <div>
@@ -36,7 +36,7 @@ export default props => {
                 </div>
 
                 <div className="section2">
-                    <div className="playerDesc">
+                    <div className="playerDesc"> 
                         <div className="TeamName">
                             {player.team}
                         </div>
