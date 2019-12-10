@@ -16,6 +16,8 @@ import TeamPage from "./TeamPage"
 import Dev from "./MeetTheDev"
 import Login from './Login'
 import Register from './Register'
+import SocialLinks from "./MintSocial"
+import ShareIcons from "./PlayerSocials"
 import Profile from "./Profile"
 import { useAuth } from "../hooks"
 
@@ -42,6 +44,8 @@ function App() {
           <Route path="/thedevs" component={Dev}/>
           <Route path='/login' component={Login} />
           <Route path='/register' component={Register} />
+          <Route path='/social' component={SocialLinks} />
+          <Route path='/test' component={ShareIcons}/>
 
           {isAuthenticated ? 
             <Route path="/profiles/:username" component={Profile} /> : ""

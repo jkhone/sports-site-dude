@@ -201,3 +201,12 @@ header{
   /* max-height: 200px; */
   height: 100%;
 }
+
+/* Social Icons */
+
+.socialmedia button {filter: grayscale(100%);}
+
+span.aws-btn__wrapper{filter: grayscale(100%);
+transition: .5s;}
+
+span.aws-btn__wrapper:hover {filter: grayscale(0);}

@@ -2,11 +2,16 @@ import React, { useState, useEffect } from "react"
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 import "../styles/PlayersPage.css"
+import PlayerSocials from "./PlayerSocials"
+// import { useShoes } from "../hooks"
+
 
 export default props => {
     const [player, setPlayer] = useState([])
     const [shoe, setShoe] = useState([])
+    // const { shoes } = useShoes()
     const id = props.match.params.id
+
     console.log(id)
 
     useEffect(() => {
@@ -26,6 +31,10 @@ export default props => {
                 <div className="productleft">
                     <img src={player.url} alt=''/>
                 </div>
+                <div>
+                <PlayerSocials/>
+                </div>
+
                 <div className="section2">
                     <div className="playerDesc"> 
                         <div className="TeamName">
@@ -35,6 +44,7 @@ export default props => {
                             {player.player}
                         </div>
                     </div>
+                    {/* {shoes.map((shoe, i) => ( */}
                     <Link className="productright" to={"/product/" + shoe.id} key={'shoe'}>
                         <img className="shoePic" src={`${shoe.pic}`} alt="" />
                         <div className="brand">{shoe.brand}</div>
@@ -42,9 +52,12 @@ export default props => {
                         {/* <div className="size">Size {shoe.size}</div> */}
                         <div className="ShoePrice">${shoe.price}</div>
                     </Link>
+                {/* ))} */}
                 </div>
 
             </div>
         </div>
     )
 }
+
+
