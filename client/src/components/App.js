@@ -11,11 +11,14 @@ import Main from "./Main"
 import TheGuys from "./TheGuys"
 import Form from "./form"
 import {Stripe} from "./StripeCheckout"
+import BrandPage from "./BrandPage"
+import TeamPage from "./TeamPage"
 import Dev from "./MeetTheDev"
 import Login from './Login'
 import Register from './Register'
 import Profile from "./Profile"
 import { useAuth } from "../hooks"
+
 
 function App() {
   const { isAuthenticated } = useAuth()
@@ -25,13 +28,16 @@ function App() {
     <Router>
       <div className="container">
         <Header />
+
           <Route path="/stripe" component={Stripe}/>
           <Route exact path="/form" component={Form} />
           <Route exact path="/" component={Main} />
           <Route path="/shoes" component={ShoesPage} />
+          <Route path="/shoes/:brandId" component={BrandPage} />
           <Route path="/product/:id" component={ProductPage} />
           <Route path="/players" component={Players} />
           <Route path="/player/:id" component={PlayerPage} />
+          <Route path="/players/:team" component={TeamPage} />
           <Route path="/MVPs" component={TheGuys}/>
           <Route path="/thedevs" component={Dev}/>
           <Route path='/login' component={Login} />
@@ -42,6 +48,7 @@ function App() {
           }
 
         <Footer/>    
+
       </div>
     </Router>
   )

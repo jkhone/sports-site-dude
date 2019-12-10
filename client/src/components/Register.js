@@ -42,7 +42,7 @@ export default props => {
                         onChange={e => setPassword(e.target.value)}
                     />
                     </div>
-                    <button className="LogReg" type='submit' >Register</button>
+                    <button className="LogReg" type='submit' >SIGN UP</button>
                 </form>
             </div>
         </div>
