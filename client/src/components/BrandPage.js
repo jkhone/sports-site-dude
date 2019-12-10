@@ -1,23 +1,29 @@
 import React, { useEffect} from 'react'
-import { useShoes } from "../hooks"
 import "../styles/ShoesPage.css"
 import "../styles/Players.css"
-import { Link } from 'react-router-dom'
-import ProductFilter from "./ShoesPageFilter"
-import ShoeSearch from "./ShoeSearch"
+import { useShoes } from "../hooks"
+
+
+
 
 export default props => {
-    const { shoes } = useShoes()
-
+    const { brandShoes } = useShoes()
+    const brandId = props.match.params.brandId
   
 
+    useEffect(() =>{
+        console.log(props)
+        
+        brandShoes(brandId)
+
+    }, [brandId])
+
+  
+    
     return (
         <>
-        <div><ProductFilter/></div>
-        <div><ShoeSearch /></div>
-     
-
-        <div id="playercontainer">
+      
+        {/* <div id="playercontainer">
             {shoes.map((shoe, i) => (
                 <Link to={"/product/" + shoe.id} key={'shoe' + i}>
                     <div className="player">
@@ -31,7 +37,7 @@ export default props => {
                 </Link>
             ))}
 
-        </div>
+        </div> */}
         </>
     )
 }

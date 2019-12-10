@@ -2,15 +2,17 @@ import { useEffect } from 'react'
 import axios from 'axios'
 import { useSelector, useDispatch } from 'react-redux'
 
-
+// action names
 const GET_PLAYERS = 'GET_PLAYERS'
 const GET_TEAM = 'GET_TEAM'
 const GET_PLAYER_SEARCH = 'GET_PLAYER_SEARCH'
 
+// initial state
 const initialState = {
     players: []
 }
 
+// reducer
 export default (state= initialState, action) =>{
     switch(action.type) {
         case GET_PLAYERS: 
@@ -24,9 +26,11 @@ export default (state= initialState, action) =>{
     }
 }
 
+//actions
 const getPlayers = () => {
     return dispatch => {
         axios.get("/api/players").then(resp => {
+            console.log('data', resp.data)
             dispatch({
                 type: GET_PLAYERS,
                 payload: resp.data
@@ -57,17 +61,17 @@ const PlayerSearch = (search) => {
     }
 }
 
+// custom hooks
+
 export const usePlayers = () => {
+    const dispatch = useDispatch()
     const players = useSelector(appState => appState.playerState.players)
-    const team = team => dispatch(getTeam(team))
     const playersearch = search =>dispatch(PlayerSearch(search))
     const allPlayers = ()=> dispatch(getPlayers())
-
-    const dispatch = useDispatch()
-
+    const team = team => dispatch(getTeam(team))
+    
     useEffect(()=>{
         dispatch(getPlayers())
-
     },[dispatch])
 
     return { players, team, playersearch, allPlayers }

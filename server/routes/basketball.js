@@ -70,7 +70,19 @@ router.get("/players/:id", (request, response, next) => {
     })
 })
 
+router.get("/players/:team", (request, response, next) => {
+    console.log("hello")
+    const team = request.params.team
+    const sql = `
+    SELECT id, player, team, url
+    FROM players
+    WHERE team = ?
+    `
 
+    db.query(sql, [team], (error, results, fields) => {
+        response.json(results)
+    })
+})
 
 router.get("/shoes", (request, response, next) => {
     const sql = `
@@ -122,8 +134,8 @@ router.post("/shoes", (request, response, next) => {
 
 
 
-router.get("/shoes/brands/:brand", (request, response, next) => {
-    const brand = request.params.brand
+router.get("/shoes/brands/:brandId", (request, response, next) => {
+    const brand = request.params.brandId
     console.log("nike")
     const sql = `
     SELECT id, playerid, brand, shoe, size, color, pic, price

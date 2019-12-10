@@ -72,7 +72,8 @@ export function useShoes() {
 
   useEffect(() => {
     dispatch(showShoes())
-  }, [dispatch])
+  }, [dispatch ])
 
   return { shoes, brandShoes, shoesearch, show}
 }
+
