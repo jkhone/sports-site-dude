@@ -193,9 +193,11 @@ header{
 .brandshome {
   display: flex;
   justify-content: space-evenly;
+  height: 20vh;
   
 }
 
 .brandshome img {
-  max-height: 200px;
+  /* max-height: 200px; */
+  height: 100%;
 }

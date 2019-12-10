@@ -10,14 +10,16 @@ import Footer from "./Footer"
 import Main from "./Main"
 import TheGuys from "./TheGuys"
 import Form from "./form"
-import PlayerSearch from "./PlayerSearch"
 import {Stripe} from "./StripeCheckout"
 import Dev from "./MeetTheDev"
 import Login from './Login'
 import Register from './Register'
-
+import Profile from "./Profile"
+import { useAuth } from "../hooks"
 
 function App() {
+  const { isAuthenticated } = useAuth()
+
   return (
 
     <Router>
@@ -34,6 +36,11 @@ function App() {
           <Route path="/thedevs" component={Dev}/>
           <Route path='/login' component={Login} />
           <Route path='/register' component={Register} />
+
+          {isAuthenticated ? 
+            <Route path="/profiles/:username" component={Profile} /> : ""
+          }
+
         <Footer/>    
       </div>
     </Router>
