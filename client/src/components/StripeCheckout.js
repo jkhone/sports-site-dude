@@ -4,7 +4,8 @@ import axios from "axios";
 import {toast} from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useCart } from "../hooks"
-import "../styles/Stripe.css"
+// import "../styles/Stripe.css"
+import "../styles/Cart.css"
 toast.configure();
 
 export function Stripe () {
@@ -23,18 +24,18 @@ export function Stripe () {
   }
 
   return (
-      <StripeCheckout
-      stripeKey="pk_test_0rdbLJpLl8NAja6TAjzY1EVO00pMamARW1"
-      token={handleToken}
-      name="MINT"
-      description='"The Future is MINT"'
-      amount={total * 100}
-      bitcoin
-      alipay
-      billingAddress
-      shippingAddress
-      allowRememberMe
-      />
-  )
+            <StripeCheckout
+            stripeKey="pk_test_0rdbLJpLl8NAja6TAjzY1EVO00pMamARW1"
+            token={handleToken}
+            name="MINT"
+            description='"The Future is MINT"'
+            amount={total * 100}
+            bitcoin
+            alipay
+            billingAddress
+            shippingAddress
+            allowRememberMe
+          />
+  );
 }
 

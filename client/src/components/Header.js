@@ -34,14 +34,24 @@ export default props => {
           </Link>
         </div>
         <div className="header-right">
-          <div>
+          <Link to="/login">
+            <div className="header-item">
+              LOGIN
+            </div>
+          </Link>
+          <Link to="/register">
+            <div className="header-item">
+              SIGN UP
+            </div>
+          </Link>
+          {/* <div>
             <Icon icon="search"/>
             <input   
               className="searchBAR"
               type="text" 
               placeholder="Search">
             </input>
-          </div>
+          </div> */}
           <div className="header-item">
             <Cart />
           </div>
