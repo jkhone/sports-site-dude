@@ -2,10 +2,10 @@ import { useEffect } from 'react'
 import axios from 'axios'
 import { useSelector, useDispatch } from 'react-redux'
 
-
 const GET_PLAYERS = 'GET_PLAYERS'
 const GET_TEAM = 'GET_TEAM'
 const GET_PLAYER_SEARCH = 'GET_PLAYER_SEARCH'
+// const GET_GAMES = 'GET_GAMES'
 
 const initialState = {
     players: []
@@ -18,11 +18,35 @@ export default (state= initialState, action) =>{
         case GET_TEAM: 
             return {...state, players: action.payload}    
         case GET_PLAYER_SEARCH: 
-            return {...state, players: action.payload}     
+            return {...state, players: action.payload}   
+
+        // case GET_GAMES: 
+        //     return {...state, players: action.payload}  
+
         default:
             return state
     }
 }
+
+
+
+
+
+// const getGames = () => {
+//     return dispatch => {
+//         axios.get("/api/players/teams/:team1/:team2").then(resp => {
+//             dispatch({
+//                 type: GET_GAMES,
+//                 payload: resp.data
+//             })
+//         })
+//     }
+// }
+
+
+
+
+
 
 const getPlayers = () => {
     return dispatch => {
@@ -59,6 +83,9 @@ const PlayerSearch = (search) => {
 
 export const usePlayers = () => {
     const players = useSelector(appState => appState.playerState.players)
+
+    // const games = useSelector(appState => appState.playerState.games)
+
     const team = team => dispatch(getTeam(team))
     const playersearch = search =>dispatch(PlayerSearch(search))
     const allPlayers = ()=> dispatch(getPlayers())
@@ -68,8 +95,9 @@ export const usePlayers = () => {
     useEffect(()=>{
         dispatch(getPlayers())
 
+        // dispatch(getGames())
+    
     },[dispatch])
 
-    return { players, team, playersearch, allPlayers }
+    return { players, team, playersearch, allPlayers /*, games*/ }
 }
-

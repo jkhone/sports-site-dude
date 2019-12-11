@@ -15,6 +15,7 @@ import {Stripe} from "./StripeCheckout"
 import Dev from "./MeetTheDev"
 import Login from './Login'
 import Register from './Register'
+import Games from './Games'
 
 
 function App() {
@@ -23,9 +24,9 @@ function App() {
     <Router>
       <div className="container">
         <Header />
+          <Route exact path="/" component={Main} />
           <Route path="/stripe" component={Stripe}/>
           <Route exact path="/form" component={Form} />
-          <Route exact path="/" component={Main} />
           <Route path="/shoes" component={ShoesPage} />
           <Route path="/product/:id" component={ProductPage} />
           <Route path="/players" component={Players} />
@@ -34,6 +35,7 @@ function App() {
           <Route path="/thedevs" component={Dev}/>
           <Route path='/login' component={Login} />
           <Route path='/register' component={Register} />
+          <Route path="/games/:team1/:team2" component={Games}/>
         <Footer/>    
       </div>
     </Router>
