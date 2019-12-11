@@ -20,7 +20,7 @@ import SocialLinks from "./MintSocial"
 import ShareIcons from "./PlayerSocials"
 import Profile from "./Profile"
 import { useAuth } from "../hooks"
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const { isAuthenticated } = useAuth()
@@ -28,12 +28,14 @@ function App() {
   return (
 
     <Router>
+      <Header />
+      <Route exact path="/" component={Main} />
       <div className="container">
-        <Header />
+        
 
           <Route path="/stripe" component={Stripe}/>
           <Route exact path="/form" component={Form} />
-          <Route exact path="/" component={Main} />
+
           <Route path="/shoes" component={ShoesPage} />
           <Route path="/shoes/:brandId" component={BrandPage} />
           <Route path="/product/:id" component={ProductPage} />
@@ -51,9 +53,10 @@ function App() {
             <Route path="/profiles/:username" component={Profile} /> : ""
           }
 
-        <Footer/>    
+           
 
       </div>
+      <Footer/> 
     </Router>
   )
 }

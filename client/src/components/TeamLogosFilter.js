@@ -4,6 +4,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"
 import "../styles/Filter.css"
 import { usePlayers } from "../hooks"
 import { Link } from "react-router-dom"
+import Image from 'react-bootstrap/Image'
 
 export default function() {
     const { team } = usePlayers()
@@ -15,7 +16,7 @@ export default function() {
                 <div key={"logo" + i}>
                     <Link to={"/players/"+logo.name}>
                         <div onClick={e=> team(logo.name)}>
-                            <img src={`${logo.img}`} alt="whoops" />
+                            <Image src={`${logo.img}`} alt="whoops" fluid />
                         </div>
                     </Link>
                 </div> 
