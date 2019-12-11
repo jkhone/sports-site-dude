@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from 'react-router-dom'
 import Icon from "../lib/Icon"
 import Social from "./MintSocial"
 
@@ -70,16 +71,16 @@ export default props => {
                   Nuggets - 100
                 </div>
               </div>
-
-              <div className="GAME">
-                <div className="WIN">
-                  Celtics - 110
+              <Link to="/games/Celtics/Mavericks">
+                <div className="GAME">
+                  <div className="WIN">
+                    Celtics - 110
+                  </div>
+                  <div className="LOSS">
+                    Mavericks - 100
+                  </div>
                 </div>
-                <div className="LOSS">
-                  Mavericks - 100
-                </div>
-              </div>
-
+              </Link>
               <div className="GAME">
                 <div className="LOSS">
                   Golden State - 100
@@ -157,16 +158,16 @@ export default props => {
                   Nuggets - 100
                 </div>
               </div>
-
-              <div className="GAME">
-                <div className="WIN">
-                  Celtics - 110
+              <Link to="/games/Celtics/Mavericks">
+                <div className="GAME">
+                  <div className="WIN">
+                    Celtics - 110
+                  </div>
+                  <div className="LOSS">
+                    Mavericks - 100
+                  </div>
                 </div>
-                <div className="LOSS">
-                  Mavericks - 100
-                </div>
-              </div>
-
+              </Link>
               <div className="GAME">
                 <div className="LOSS">
                   Golden State - 100
