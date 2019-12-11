@@ -9,10 +9,11 @@ export default props => {
   const { players } = usePlayers()
 
   return (
-    <>
+  <>
         <div><TeamLogos /></div>
         <div><PlayerSearch /></div>
     
+
        <div id="playercontainer">
           {players.map((players, i) => (
           <div id="profile"  key={'player' + i} >
@@ -29,9 +30,10 @@ export default props => {
   	  </div>
         ))}
 
+
     </div>
-    </>
-    )
-  }
+  </>
+  )
+}
 
 
