@@ -16,7 +16,7 @@ const ShoeSearch = props => {
 return(
     <div className="brandfiltercontainer">
         <form className="brandfilter" onSubmit={handleSubmit}>
-            <input className="searchBAR" placeholder="Search" type="text" name="search" value={search} onChange={e=>setSearch(e.target.value)}/>
+            <input className="searchBAR" placeholder="Search by brand" type="text" name="search" value={search} onChange={e=>setSearch(e.target.value)}/>
         {/* <button type="submit">Search</button> */}
         </form>
 

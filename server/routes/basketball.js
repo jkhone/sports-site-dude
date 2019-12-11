@@ -103,7 +103,7 @@ router.get("/shoes", (request, response, next) => {
 })
 
 router.get("/shoes/search/:search", (request, response, next) => {
-    console.log("search")
+    
     const search = `%${request.params.search.toLowerCase()}%` 
     const sql = `
     SELECT id, playerid, brand, shoe, size, color, pic, price
@@ -112,7 +112,26 @@ router.get("/shoes/search/:search", (request, response, next) => {
     `
 
     db.query(sql, [search], (error, results, fields) => {
+        console.log("search query")
         response.json(results)
+    })
+})
+
+router.get("/shoes/size/:size", (request, response, next) => {    
+    const size = request.params.size
+
+    console.log(size)
+ 
+    const sql = `
+    SELECT id, playerid, brand, shoe, size, color, pic, price
+    FROM shoes
+    WHERE size LIKE ?  
+    `
+    
+
+    db.query(sql, [size], (error, results, fields) => {
+        response.json(results)
+        // console.log(results)
     })
 })
 
@@ -158,7 +177,7 @@ router.get("/shoes/:id", (request, response, next) => {
     const id = request.params.id
     const sql = `
     SELECT id, playerid, brand, shoe, size, color, pic, price
-    FROM shoes WHERE id = ?
+    FROM shoes WHERE playerid = ?
     `
 
     db.query(sql, [id], (error, results, fields) => {
