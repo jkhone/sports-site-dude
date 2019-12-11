@@ -6,6 +6,7 @@ import { useSelector, useDispatch } from 'react-redux'
 const LIST_SHOES = "calls/LIST_SHOES"
 const GET_BRAND_SHOES = 'GET_BRAND_SHOES'
 const GET_SHOES_SEARCH = 'GET_SHOES_SEARCH'
+const GET_SIZE = 'GET_SIZE'
 
 // initial state
 const initialState = {
@@ -21,6 +22,8 @@ export default function reducer(state = initialState, action) {
       return {...state, shoes: action.payload}
     case GET_SHOES_SEARCH:
       return {...state, shoes: action.payload}  
+    case GET_SIZE:
+        return {...state, shoes: action.payload}    
     default:
       return state
   }
@@ -58,6 +61,19 @@ const ShoeSearch = (search) => {
               payload: resp.data
           })
       })
+      console.log("ShoeSearch duck")
+  }
+}
+
+const shoeSize = (size) => {
+  return dispatch => {
+      Axios.get("api/shoes/size/"+size).then(resp => {
+          dispatch({
+              type: GET_SIZE,
+              payload: resp.data
+          })
+      })
+      console.log(size)
   }
 }
 
@@ -68,12 +84,13 @@ export function useShoes() {
   const shoes = useSelector(appState => appState.shoesReducer.shoes)
   const shoesearch = search => dispatch(ShoeSearch(search))
   const brandShoes = brand => dispatch(getBrandShoes(brand))
+  const getSize = size => dispatch(shoeSize(size))
   const show = () => dispatch(showShoes())
 
   useEffect(() => {
     dispatch(showShoes())
   }, [dispatch ])
 
-  return { shoes, brandShoes, shoesearch, show}
+  return { shoes, brandShoes, shoesearch, show, getSize}
 }
 
