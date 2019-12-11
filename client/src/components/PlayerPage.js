@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 import "../styles/PlayersPage.css"
 import PlayerSocials from "./PlayerSocials"
 
-
 export default props => {
     const [player, setPlayer] = useState([])
     const [shoe, setShoe] = useState([])
