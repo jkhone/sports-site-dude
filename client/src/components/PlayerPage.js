@@ -2,11 +2,13 @@ import React, { useState, useEffect } from "react"
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 import "../styles/PlayersPage.css"
+import PlayerSocials from "./PlayerSocials"
 
 export default props => {
     const [player, setPlayer] = useState([])
     const [shoe, setShoe] = useState([])
     const id = props.match.params.id
+
     console.log(id)
 
     useEffect(() => {
@@ -14,8 +16,8 @@ export default props => {
             setPlayer(resp.data[0])
             console.log("player", resp.data)
         })
-        axios.get(`/api/shoes/${id}`).then(resp => {
-            setShoe(resp.data[0])
+        axios.get(`/api/playershoes/${id}`).then(resp => {
+            setShoe(resp.data)
             console.log("shoe", resp.data)
         })
     }, [id])
@@ -26,6 +28,10 @@ export default props => {
                 <div className="productleft">
                     <img src={player.url} alt=''/>
                 </div>
+                <div>
+                <PlayerSocials/>
+                </div>
+
                 <div className="section2">
                     <div className="playerDesc"> 
                         <div className="TeamName">
@@ -35,16 +41,20 @@ export default props => {
                             {player.player}
                         </div>
                     </div>
-                    <Link className="productright" to={"/product/" + shoe.id} key={'shoe'}>
-                        <img className="shoePic" src={`${shoe.pic}`} alt="" />
+                    {shoe.map((shoe, i) => (
+                    <Link className="productright" to={"/product/" + shoe.id} key={'shoe' + i}>
+                        <img className="shoePic" src={shoe.pic} alt="" />
                         <div className="brand">{shoe.brand}</div>
                         <div className="name">{shoe.shoe}</div>
-                        {/* <div className="size">Size {shoe.size}</div> */}
+                        <div className="size">Size {shoe.size}</div>
                         <div className="ShoePrice">${shoe.price}</div>
-                    </Link>
+                    </Link> 
+                  ))} 
                 </div>
 
             </div>
         </div>
     )
 }
+
+

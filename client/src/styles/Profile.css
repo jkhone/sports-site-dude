@@ -1,0 +1,15 @@
+.profile {
+    width: 40%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profilepic  {
+    width: inherit;
+}
+
+.profilepic img {
+    width: 100%;
+}

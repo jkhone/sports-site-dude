@@ -43,7 +43,7 @@ export const teamFilter = [
     {
       id:"2",
       img: "https://ballershoesdb.com/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2016/12/Golden-State-Warriors-Logo-500x611.png.webp",
-      name: "Under Armour"
+      name: "Warriors"
     },
     {
 
