@@ -7,6 +7,7 @@ import ProductFilter from "./ShoesPageFilter"
 import ShoeSearch from "./ShoeSearch"
 import ShoeSize from "./ShoeSizeFilter"
 import Pagination from "./Pagination"
+import Image from 'react-bootstrap/Image'
 
 
 export default props => {
@@ -27,7 +28,7 @@ export default props => {
 
     return (
         <>
-        <div><ProductFilter/></div>
+        {/* <div><ProductFilter/></div> */}
         <div><ShoeSearch /></div>
         <div><ShoeSize /></div>
         
@@ -35,7 +36,7 @@ export default props => {
             {currentPosts.map((shoe, i) => (
                 <Link to={"/product/" + shoe.id} key={'shoe' + i}>
                     <div className="player">
-                        <img className="shoeImg" src={`${shoe.pic}`} alt="" />
+                        <Image className="shoeImg" src={`${shoe.pic}`} alt="" fluid />
                         <div className="playerDesc">
                             <div className="teamName">{shoe.brand}</div>
                             <div className="playerName">{shoe.shoe}</div>   
@@ -44,8 +45,8 @@ export default props => {
                     </div>
                 </Link>
             ))}
-            <Pagination postsPerPage={postsPerPage} totalPosts={shoes.length} paginate={paginate} />
         </div>
+        <Pagination postsPerPage={postsPerPage} totalPosts={shoes.length} paginate={paginate} />
         </>
     )
 }

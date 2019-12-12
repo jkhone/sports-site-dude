@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 import axios from 'axios'
 import { useCart } from "../hooks"
 import { Link } from 'react-router-dom'
-
+import Image from 'react-bootstrap/Image'
 import "../styles/ProductPage.css"
 
 export default props => {
@@ -31,7 +31,7 @@ export default props => {
         <div className="page">
             <div className='product'>
                 <div className="productleft">
-                    <img src={shoe.pic} alt=''/>
+                    <Image src={shoe.pic} alt='' fluid />
                 </div>
                 <div className="productright">
                     <div className="brand">{shoe.brand}</div>
@@ -42,7 +42,7 @@ export default props => {
                     
                     <Link to={"/player/" + player.id} key={'player'}>
                     <div className="playerIMG">
-                        <img src={player.url} alt=''/>
+                        <Image src={player.url} alt='' fluid />
                     </div>
                     <div className="playerSec">
                         <div className="playerDesc"> 
