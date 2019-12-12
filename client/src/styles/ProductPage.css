@@ -65,5 +65,29 @@
 
 .playerIMG img{
 	width: 30vh;
-	margin: 7px 0px 0px;
+	margin: 7px 0px 0px 
+}
+
+.puButton{
+	font-size: 20px;
+	width: 100%;
+	text-transform: uppercase;
+	color: #888;
+	background: transparent;
+	border: #888 1px solid;
+	font-family: 'Roboto Condensed', sans-serif;
+	outline: none;
+	cursor: pointer;
+	transition: color 500ms, border 500ms;
+	margin-top: 20px;
+}
+
+.puButton:hover{
+	color: #333;
+	border: #333 1px solid;
+}
+
+div.popup-content {	color: #00FFDA;
+	background: #333 !important;
+
 }

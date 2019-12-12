@@ -216,3 +216,8 @@ span.aws-btn__wrapper{filter: grayscale(100%);
 transition: .5s;}
 
 span.aws-btn__wrapper:hover {filter: grayscale(0);}
+
+.socials {margin: 0px 100px 0px 50px}
+
+.newsLetterHome {  margin: 0px 100px 0px 50px;
+}
