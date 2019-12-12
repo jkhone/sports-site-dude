@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 import axios from 'axios'
 import { useCart } from "../hooks"
 import { Link } from 'react-router-dom'
-
+import Popup from "reactjs-popup";
 import "../styles/ProductPage.css"
 
 export default props => {
@@ -40,21 +40,25 @@ export default props => {
                     <div className="ShoePrice">${shoe.price}</div>
                     <button className="addToCart" onClick={e => handleAdd(e, shoe)}>Add to Cart</button>
                     
-                    <Link to={"/player/" + player.id} key={'player'}>
-                    <div className="playerIMG">
-                        <img src={player.url} alt=''/>
-                    </div>
-                    <div className="playerSec">
-                        <div className="playerDesc"> 
-                            <div className="brand">
-                                {player.team}
-                            </div>
-                            <div className="name">
-                                {player.player}
-                            </div>
+                    <Popup trigger={<button className="puButton"> Who wears this shoe?</button>} position="right center">
+                        <div>
+                            <Link to={"/player/" + player.id} key={'player'}>
+                                <div className="playerIMG">
+                                </div>
+                                <div className="playerSec">
+                                    <div className="playerDesc"> 
+                                        <div className="brand">
+                                            {player.team}
+                                        </div>
+                                        <div className="name">
+                                            {player.player}
+                                        </div>
+                                    </div>
+                                </div>
+                            </Link>
                         </div>
-                    </div>
-                    </Link>
+                    </Popup>
+                    
                 </div>
             </div>
         </div>   

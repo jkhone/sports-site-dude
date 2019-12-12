@@ -24,6 +24,12 @@ return (
                 target="_blank"
                 size="icon">
           </AwesomeButtonSocial>
+          <AwesomeButtonSocial
+                type="twitter"
+                url="https://www.sciencealert.com/images/2019-12/processed/CatsHaveFacialExpressionsButHardToRead_600.jpg"
+                target="_blank"
+                size="icon">
+          </AwesomeButtonSocial>
         </div>
 
     </div>

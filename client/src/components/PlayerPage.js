@@ -3,6 +3,8 @@ import axios from 'axios'
 import { Link } from 'react-router-dom'
 import "../styles/PlayersPage.css"
 import PlayerSocials from "./PlayerSocials"
+import Popup from "reactjs-popup";
+
 
 export default props => {
     const [player, setPlayer] = useState([])
@@ -26,11 +28,12 @@ export default props => {
         <div>
             <div className='playerprofile'>
                 <div className="productleft">
-                    <img src={player.url} alt=''/>
+                    <img src={player.url} alt=''/> <div>
+                <div><PlayerSocials/></div>
                 </div>
-                <div>
-                <PlayerSocials/>
                 </div>
+                
+               
 
                 <div className="section2">
                     <div className="playerDesc"> 
