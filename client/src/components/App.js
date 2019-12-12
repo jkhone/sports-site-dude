@@ -34,7 +34,6 @@ function App() {
       <Route exact path="/" component={Main} />
       <Route path="/MVPs" component={TheGuys}/>
       <div className="container">
-        <Header />
           <Route path="/stripe" component={Stripe}/>
           <Route exact path="/form" component={Form} />
           <Route path="/shoes" component={ShoesPage} />
