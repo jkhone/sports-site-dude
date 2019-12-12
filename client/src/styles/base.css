@@ -33,6 +33,10 @@ a {
 a:hover {
   text-decoration: none;
 }
+
+h2 {
+  font-family: 'Roboto Condensed', sans-serif;
+}
 /* HEADER */
 header{
   background: white;

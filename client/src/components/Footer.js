@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import Icon from "../lib/Icon"
 import Social from "./MintSocial"
 import Newsletter from "./Newsletter"
-import { Link } from 'react-router-dom'
 import Popup from "reactjs-popup";
 
 
