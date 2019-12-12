@@ -55,14 +55,18 @@ router.get("/players/search/:search", (request, response, next) => {
         response.json(results)
     })
 })
+
 router.get("/players/teams/:team1/:team2", (request, response, next) => {
     const team1 = request.params.team1
     const team2 = request.params.team2
     const sql = `
     SELECT id, player, team, url FROM players WHERE team = ? OR team = ?
     `
-    db.query(sql,[team1,team2])
+    db.query(sql,[team1,team2],(error,results,fields) => {
+        response.json(results)
+    })
 })
+
 router.get("/players/:id", (request, response, next) => {
 
     const id = request.params.id

@@ -1,15 +1,22 @@
-import React from 'react' 
+import React, { useEffect } from 'react' 
 import { usePlayers } from "../hooks"
 import { Link } from 'react-router-dom'
 import '../styles/Players.css'
 import "../styles/Games.css"
 
-export default function() {
-	const { players } = usePlayers()
-	
+export default function(props) {
+	const team1 = props.match.params.team1
+	const team2 = props.match.params.team2
+
+	const { teamedplayers, getteamedPlayers } = usePlayers()
+
+	useEffect(() => {
+		getteamedPlayers(team1,team2)
+	},[,team1,team2])
+
   return (
     <div id="playercontainer">
-      {players.map((players, i) => (
+      {teamedplayers.map((players, i) => (
 				<div id="profile"  key={'player' + i} >
 					<Link to={"/player/" + players.id}>
 						<div className="player">

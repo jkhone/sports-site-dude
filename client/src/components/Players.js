@@ -9,7 +9,7 @@ export default props => {
   const { players } = usePlayers()
 
   return (
-  <>
+  <div>
         <div><TeamLogos /></div>
         <div><PlayerSearch /></div>
     
@@ -28,7 +28,7 @@ export default props => {
         </div>
       ))}
     </div>
-  </>
+  </div>
   )
 }
 
