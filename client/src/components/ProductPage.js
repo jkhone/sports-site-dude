@@ -9,7 +9,7 @@ import "../styles/ProductPage.css"
 export default props => {
     const [shoe, setShoe] = useState([])
     const [player, setPlayer] = useState([])
-    const id = props.match.params.id    
+    const id = props.match.params.id   
     const { open, add } = useCart()
 
     function handleAdd(e, product) {
@@ -21,10 +21,13 @@ export default props => {
     useEffect(() => {
         axios.get(`/api/shoes/${id}`).then(resp => {
             setShoe(resp.data[0])
-        })
-        axios.get(`/api/players/${id}`).then(resp => {
-            setPlayer(resp.data[0])
-            console.log("player", resp.data)
+            console.log("shoe",resp.data)
+            const playerid = resp.data[0].playerid
+
+            axios.get(`/api/players/${playerid}`).then(resp => {
+                setPlayer(resp.data[0])
+                console.log("player", resp.data)
+            })
         })
     }, [id])
 
@@ -32,7 +35,7 @@ export default props => {
         <div className="page">
             <div className='product'>
                 <div className="productleft">
-                    <Image src={shoe.pic} alt='' fluid />
+                    <img src={shoe.pic} alt=''/>
                 </div>
                 <div className="productright">
                     <div className="brand">{shoe.brand}</div>

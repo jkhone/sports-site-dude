@@ -42,10 +42,10 @@ export default props => {
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 </div>
             </div>
+            <h2>Shoes worn by {player.player} </h2>
             <div className="playershoes" >
-                <h2>Shoes worn by {player.player} </h2>
                   {shoe.map((shoe, i) => (
-                    <Link className="productright" to={"/product/" + shoe.id} key={'shoe' + i}>
+                    <Link className="productright" id="playershoeslist" to={"/product/" + shoe.id} key={'shoe' + i}>
                         <img className="shoePic" src={shoe.pic} alt="" />
                         <div className="brand">{shoe.brand}</div>
                         <div className="name">{shoe.shoe}</div>

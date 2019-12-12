@@ -181,7 +181,7 @@ router.get("/shoes/:id", (request, response, next) => {
     const id = request.params.id
     const sql = `
     SELECT id, playerid, brand, shoe, size, color, pic, price
-    FROM shoes WHERE playerid = ?
+    FROM shoes WHERE id = ?
     `
 
     db.query(sql, [id], (error, results, fields) => {
