@@ -1,8 +1,8 @@
 import React from "react"
 import { brandImages } from "./BrandSliderImages"
-import "react-responsive-carousel/lib/styles/carousel.min.css"
 import "../styles/base.css"
 import { Link } from "react-router-dom"
+import Image from 'react-bootstrap/Image'
 
 export default function() {
 
@@ -11,7 +11,7 @@ export default function() {
             {brandImages.map((brand, i) => (
                 <div key={"brand" + i}>
                     <Link to={brand.url}>
-                        <img src={`${brand.img}`} alt="whoops" />
+                        <Image src={`${brand.img}`} alt="whoops" fluid />
                     </Link>
                 </div>
             ))}

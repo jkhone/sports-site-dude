@@ -3,6 +3,7 @@ import axios from 'axios'
 import { useCart } from "../hooks"
 import { Link } from 'react-router-dom'
 import Popup from "reactjs-popup";
+import Image from 'react-bootstrap/Image'
 import "../styles/ProductPage.css"
 
 export default props => {
@@ -31,7 +32,7 @@ export default props => {
         <div className="page">
             <div className='product'>
                 <div className="productleft">
-                    <img src={shoe.pic} alt=''/>
+                    <Image src={shoe.pic} alt='' fluid />
                 </div>
                 <div className="productright">
                     <div className="brand">{shoe.brand}</div>
@@ -39,7 +40,6 @@ export default props => {
                     <div className="size">Size {shoe.size}</div>
                     <div className="ShoePrice">${shoe.price}</div>
                     <button className="addToCart" onClick={e => handleAdd(e, shoe)}>Add to Cart</button>
-                    
                     <Popup trigger={<button className="puButton"> Who wears this shoe?</button>} position="right center">
                         <div>
                             <Link to={"/player/" + player.id} key={'player'}>
@@ -58,7 +58,6 @@ export default props => {
                             </Link>
                         </div>
                     </Popup>
-                    
                 </div>
             </div>
         </div>   

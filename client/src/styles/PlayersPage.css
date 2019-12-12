@@ -1,76 +1,72 @@
 .playerprofile {
-	width: 100vh;
-	height: 80vh;
-	margin: auto;
-	display: flex;
+    width: 100%;
+    height: 80vh;
+    display: flex;
 	align-items: center;
+	display: flex;
+	justify-content: space-evenly;
 }
-
 .productleft {
-	height: 98%;
+    height: 98%;
 }
-
 .section2{
-	width: 40vh;
-	height: 98%;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-}
-
-.playerDesc{
-	display: flex;
-	flex-direction: column;
+    width: 40vh;
+    height: 98%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-evenly; */
 }
 
 .TeamName {
-	font-size: 17px;
-	text-transform: uppercase;
-	font-weight: lighter;
-	margin: 0px;
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: lighter;
+    margin: 0px;
 }
-
 .PlayerName {
-	font-size: 20px;
-	text-transform: uppercase;
-	margin: 0px;
-
+    font-size: 20px;
+    text-transform: uppercase;
+    margin: 0px;
 }
-
 .ppShoeImage {
-	justify-content: center;
+    justify-content: center;
 }
-
 .shoePic{
-	width: 100%;
+    width: 100%;
 }
-
-
 .productright{
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	width: 35vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 35vh;
 }
  
 .brand{
-	font-size: 17px;
-	text-transform: uppercase;
-	font-weight: lighter;
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: lighter;
 }
-
 .name{
-	font-size: 20px;
-	text-transform: uppercase;
+    font-size: 20px;
+    text-transform: uppercase;
 }
-
 .size{
   font-size: 20px;
   text-transform: uppercase;
 }
-
 .ShoePrice{
   font-size: 20px;
-	text-transform: uppercase;
-	color: #00FFDA;
+    text-transform: uppercase;
+    color: #00FFDA;
+}
+
+#playerpic {
+	height: 100%;
+	width: auto;
+}
+
+.playersocial {
+	margin: 10px 0;
+	display: flex;
+	justify-content: space-between;
 }

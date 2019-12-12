@@ -1,6 +1,6 @@
 #playercontainer {
-    width: 100vh;
-    margin: auto;
+    width: 100%;
+    /* margin: auto; */
     display: grid;
     justify-content: center;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -38,13 +38,13 @@
 }
 
 .teamName{
-  font-size: 17px;
+  font-size: 1vw;
   text-transform: uppercase;
   font-weight: lighter;
 }
 
 .playerName{
-  font-size: 20px;
+  font-size: 1vw;
   text-transform: uppercase;
 }
 
