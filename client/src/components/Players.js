@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 import '../styles/Players.css'
 import TeamLogos from "./TeamLogosFilter.js"
 import PlayerSearch from "./PlayerSearch"
-import Image from 'react-bootstrap/Image'
 import Pagination from "./Pagination"
 
 export default props => {
@@ -33,7 +32,7 @@ export default props => {
           <div id="profile"  key={'player' + i} >
             <Link to={"/player/" + players.id}>
               <div className="player">
-                <Image className="playerImg" src={`${players.url}`} alt="" fluid />
+                <img className="playerImg" src={`${players.url}`} alt="" />
                 <div className="playerDesc">
                   <div className="teamName">{players.team}</div>
                   <div className="playerName">{players.player}</div>
