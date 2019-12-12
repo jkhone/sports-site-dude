@@ -2,6 +2,11 @@ import React from "react"
 import { Link } from 'react-router-dom'
 import Icon from "../lib/Icon"
 import Social from "./MintSocial"
+import Newsletter from "./Newsletter"
+import { Link } from 'react-router-dom'
+import Popup from "reactjs-popup";
+
+
 
 export default props => {
     return (
@@ -255,23 +260,32 @@ export default props => {
                 </div>
               </div>
 
-              <div className="socials">
+              <div className="footerSECTION">
+                <div className="footer-title">
+                  About Us
+                </div>
+                <div className="footer-information">
+                  <div>
+                    About Mint
+                  </div>
+                  <div>
+                  <Link to={"/thedevs/"}>
+                    Meet The Devs
+                  </Link>
+                  </div>
+                </div>
+              </div>
+
+              <div className="footerSECTION">
                 <div className="footer-title">
                   Socials
                 </div>
-                <div className="social-icon">
-                  <Icon icon="twitter" />
-                </div>
-                <div className="social-icon">
-                  <Icon icon="instagram" />
-                </div>
-                <div className="social-icon">
-                  <Icon icon="facebook" />
-                </div>
-              </div>
-              <div className="socialmedia">
                 < Social/>
-              </div>
+              </div>    
+              
+              <div className="footerSECTION">
+                <Newsletter/>
+              </div>          
           </div>
         </footer>
     )

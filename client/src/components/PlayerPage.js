@@ -3,6 +3,7 @@ import axios from 'axios'
 import { Link } from 'react-router-dom'
 import "../styles/PlayersPage.css"
 import PlayerSocials from "./PlayerSocials"
+import Popup from "reactjs-popup";
 import Image from 'react-bootstrap/Image'
 
 export default props => {
