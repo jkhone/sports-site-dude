@@ -1,11 +1,10 @@
 import React from 'react' 
-import {AwesomeButtonSocial } from "react-awesome-button"
+import { AwesomeButtonSocial } from "react-awesome-button"
 import 'react-awesome-button/dist/themes/theme-blue.css'
 import "../styles/PlayersPage.css"
 
 export default props => {
-
-return (
+  return (
       <div className="playersocial">
             <AwesomeButtonSocial
                   type="facebook"
@@ -14,7 +13,7 @@ return (
                   size="icon">
             </AwesomeButtonSocial>
             <AwesomeButtonSocial
-                  type="facebook"
+                  type="instagram"
                   url="https://www.sciencealert.com/images/2019-12/processed/CatsHaveFacialExpressionsButHardToRead_600.jpg"
                   target="_blank"
                   size="icon">
@@ -26,11 +25,11 @@ return (
                   size="icon">
             </AwesomeButtonSocial>
             <AwesomeButtonSocial
-                  type="pinterest"
+                  type="youtube"
                   url="https://www.sciencealert.com/images/2019-12/processed/CatsHaveFacialExpressionsButHardToRead_600.jpg"
                   target="_blank"
                   size="icon">
             </AwesomeButtonSocial>
       </div>
-)
+  )
 }

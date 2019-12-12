@@ -3,13 +3,11 @@ import axios from 'axios'
 import { Link } from 'react-router-dom'
 import "../styles/PlayersPage.css"
 import PlayerSocials from "./PlayerSocials"
-// import { useShoes } from "../hooks"
 import Image from 'react-bootstrap/Image'
 
 export default props => {
     const [player, setPlayer] = useState([])
     const [shoe, setShoe] = useState([])
-    // const { shoes } = useShoes()
     const id = props.match.params.id
 
     console.log(id)
@@ -19,8 +17,8 @@ export default props => {
             setPlayer(resp.data[0])
             console.log("player", resp.data)
         })
-        axios.get(`/api/shoes/${id}`).then(resp => {
-            setShoe(resp.data[0])
+        axios.get(`/api/playershoes/${id}`).then(resp => {
+            setShoe(resp.data)
             console.log("shoe", resp.data)
         })
     }, [id])
@@ -45,12 +43,15 @@ export default props => {
             </div>
             <div className="playershoes" >
                 <h2>Shoes worn by {player.player} </h2>
-                <Link className="productright" to={"/product/" + shoe.id} key={'shoe'}>
-                    <Image className="shoePic" src={`${shoe.pic}`} alt="" fluid />
-                    <div className="brand">{shoe.brand}</div>
-                    <div className="name">{shoe.shoe}</div>
-                    <div className="ShoePrice">${shoe.price}</div>
-                </Link>
+                  {shoe.map((shoe, i) => (
+                    <Link className="productright" to={"/product/" + shoe.id} key={'shoe' + i}>
+                        <img className="shoePic" src={shoe.pic} alt="" />
+                        <div className="brand">{shoe.brand}</div>
+                        <div className="name">{shoe.shoe}</div>
+                        <div className="size">Size {shoe.size}</div>
+                        <div className="ShoePrice">${shoe.price}</div>
+                    </Link> 
+                  ))} 
             </div>
         </div>
     )

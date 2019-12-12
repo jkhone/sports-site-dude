@@ -16,11 +16,13 @@ import TeamPage from "./TeamPage"
 import Dev from "./MeetTheDev"
 import Login from './Login'
 import Register from './Register'
+import Games from './Games'
 import SocialLinks from "./MintSocial"
 import ShareIcons from "./PlayerSocials"
 import Profile from "./Profile"
 import { useAuth } from "../hooks"
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
   const { isAuthenticated } = useAuth()
@@ -32,6 +34,7 @@ function App() {
       <Route exact path="/" component={Main} />
       <Route path="/MVPs" component={TheGuys}/>
       <div className="container">
+        <Header />
           <Route path="/stripe" component={Stripe}/>
           <Route exact path="/form" component={Form} />
           <Route path="/shoes" component={ShoesPage} />
@@ -43,6 +46,7 @@ function App() {
           <Route path="/thedevs" component={Dev}/>
           <Route path='/login' component={Login} />
           <Route path='/register' component={Register} />
+          <Route path="/games/:team1/:team2" component={Games}/>
           <Route path='/social' component={SocialLinks} />
           <Route path='/test' component={ShareIcons}/>
 

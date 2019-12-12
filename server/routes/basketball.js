@@ -56,6 +56,17 @@ router.get("/players/search/:search", (request, response, next) => {
     })
 })
 
+router.get("/players/teams/:team1/:team2", (request, response, next) => {
+    const team1 = request.params.team1
+    const team2 = request.params.team2
+    const sql = `
+    SELECT id, player, team, url FROM players WHERE team = ? OR team = ?
+    `
+    db.query(sql,[team1,team2],(error,results,fields) => {
+        response.json(results)
+    })
+})
+
 router.get("/players/:id", (request, response, next) => {
 
     const id = request.params.id
@@ -96,7 +107,7 @@ router.get("/shoes", (request, response, next) => {
 })
 
 router.get("/shoes/search/:search", (request, response, next) => {
-    console.log("search")
+    
     const search = `%${request.params.search.toLowerCase()}%` 
     const sql = `
     SELECT id, playerid, brand, shoe, size, color, pic, price
@@ -105,7 +116,26 @@ router.get("/shoes/search/:search", (request, response, next) => {
     `
 
     db.query(sql, [search], (error, results, fields) => {
+        console.log("search query")
         response.json(results)
+    })
+})
+
+router.get("/shoes/size/:size", (request, response, next) => {    
+    const size = request.params.size
+
+    console.log(size)
+ 
+    const sql = `
+    SELECT id, playerid, brand, shoe, size, color, pic, price
+    FROM shoes
+    WHERE size LIKE ?  
+    `
+    
+
+    db.query(sql, [size], (error, results, fields) => {
+        response.json(results)
+        // console.log(results)
     })
 })
 
@@ -151,7 +181,20 @@ router.get("/shoes/:id", (request, response, next) => {
     const id = request.params.id
     const sql = `
     SELECT id, playerid, brand, shoe, size, color, pic, price
-    FROM shoes WHERE id = ?
+    FROM shoes WHERE playerid = ?
+    `
+
+    db.query(sql, [id], (error, results, fields) => {
+        response.json(results)
+    })
+})
+
+router.get("/playershoes/:id", (request, response, next) => {
+    console.log("hello")
+    const id = request.params.id
+    const sql = `
+    SELECT id, playerid, brand, shoe, size, color, pic, price
+    FROM shoes WHERE playerid = ?
     `
 
     db.query(sql, [id], (error, results, fields) => {

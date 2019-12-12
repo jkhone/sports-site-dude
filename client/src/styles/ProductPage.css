@@ -1,15 +1,15 @@
 .product {
-    /* height: 65vh; */
-    width: 100vh;
-    margin: auto;
-    margin-bottom: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	/* height: 65vh; */
+	width: 100vh;
+	margin: auto;
+	margin-bottom: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .productleft {
-    width: 100%;
+	width: 100%;
 }
 
 .productleft img {
@@ -64,6 +64,6 @@
 }
 
 .playerIMG img{
-    width: 30vh;
-    margin: 7px 0px 0px;
+	width: 30vh;
+	margin: 7px 0px 0px;
 }

@@ -7,7 +7,6 @@ import PlayerSearch from "./PlayerSearch"
 import Image from 'react-bootstrap/Image'
 import Pagination from "./Pagination"
 
-
 export default props => {
   const { players } = usePlayers()
 
@@ -26,27 +25,25 @@ export default props => {
 
   return (
     <>
-        {/* <div><TeamLogos /></div> */}
-        <div><PlayerSearch /></div>
+      {/* <div><TeamLogos /></div> */}
+      <div><PlayerSearch /></div>
     
-    <div id="playercontainer">
-      {currentPosts.map((players, i) => (
-        <div id="profile"  key={'player' + i} >
-          <Link to={"/player/" + players.id}>
-            <div className="player">
-              <Image className="playerImg" src={`${players.url}`} alt="" fluid />
-              <div className="playerDesc">
-                <div className="teamName">{players.team}</div>
-                <div className="playerName">{players.player}</div>
-              </div>
-            </div>
-          </Link>
+      <div id="playercontainer">
+        {currentPosts.map((players, i) => (
+          <div id="profile"  key={'player' + i} >
+            <Link to={"/player/" + players.id}>
+              <div className="player">
+                <Image className="playerImg" src={`${players.url}`} alt="" fluid />
+                <div className="playerDesc">
+                  <div className="teamName">{players.team}</div>
+                  <div className="playerName">{players.player}</div>
+                </div>
+              </div>   
+            </Link>
         </div>
-      ))}
-    </div>
-    <Pagination postsPerPage={postsPerPage} totalPosts={players.length} paginate={paginate} />
+        ))}
+      </div>
+      <Pagination postsPerPage={postsPerPage} totalPosts={players.length} paginate={paginate} />
     </>
-    )
+  )
 }
-
-
