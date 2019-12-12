@@ -3,7 +3,7 @@ import { useAuth } from "../hooks"
 import firebase from "firebase"
 import FileUploader from "react-firebase-file-uploader"
 import LoadingOverlay from 'react-loading-overlay'
-import "../styles/Profile.css" 
+import "../styles/Profile.css"
 
 const firebaseConfig = {
     apiKey: "AIzaSyCYB4M49C3bgeyS0KM2Uq6ThgEkybLSjlQ",

@@ -8,69 +8,82 @@ export default props => {
         <footer>
           <div className="scoreBar">
             <div className="games1">
+              <Link to="/games/Bulls/Wizards">
+                <div className="GAME">
+                  <div className="WIN">
+                    Bulls - 110
+                  </div>
+                  <div className="LOSS">
+                    Wizards - 100
+                  </div>
+                </div>
+              </Link>
 
-              <div className="GAME">
-                <div className="WIN">
-                  Bulls - 110
+              <Link to="/games/Hornets/Cavaliers">
+                <div className="GAME">            
+                  <div className="WIN">
+                    Hornets - 110
+                  </div>          
+                  <div className="LOSS">
+                    Cavaliers - 100
+                  </div>
                 </div>
-                <div className="LOSS">
-                  Wizards - 100
-                </div>
-              </div>
+              </Link>
 
-              <div className="GAME">            
-                <div className="WIN">
-                  Hornets - 110
-                </div>          
-                <div className="LOSS">
-                  Cavaliers - 100
+              <Link to="/games/Heat/Sixers">
+                <div className="GAME">            
+                  <div className="WIN">
+                    Heat - 110
+                  </div>          
+                  <div className="LOSS">
+                    76ers - 100
+                  </div>
                 </div>
-              </div>
+              </Link>
 
-              <div className="GAME">            
-                <div className="WIN">
-                  Heat - 110
-                </div>          
-                <div className="LOSS">
-                  76ers - 100
+              <Link to="/games/Raptors/Pistons">
+                <div className="GAME">
+                  <div className="WIN">
+                    Raptors - 110
+                  </div>
+                  <div className="LOSS">
+                    Pistons - 100
+                  </div>
                 </div>
-              </div>
+              </Link>
 
-              <div className="GAME">
-                <div className="WIN">
-                  Raptors - 110
+              <Link to="/games/Pelicans/Timberwolves">
+                <div className="GAME">
+                  <div className="WIN">
+                    Pelicans - 110
+                  </div>
+                  <div className="LOSS">
+                    Timberwolves - 100
+                  </div>
                 </div>
-                <div className="LOSS">
-                  Pistons - 100
-                </div>
-              </div>
+              </Link>
 
-              <div className="GAME">
-                <div className="WIN">
-                  Pelicans - 110
+              <Link to="/games/Grizzlies/Thunder">
+                <div className="GAME">
+                  <div className="LOSS">
+                    Grizzlies - 100
+                  </div>
+                  <div className="WIN">
+                    Thunder - 110
+                  </div>
                 </div>
-                <div className="LOSS">
-                  Timberwolves - 100
-                </div>
-              </div>
+              </Link>
 
-              <div className="GAME">
-                <div className="WIN">
-                  Grizzlies - 110
+              <Link to="/games/Magic/Nuggets">
+                <div className="GAME">
+                  <div className="WIN">
+                    Magic - 110
+                  </div>
+                  <div className="LOSS">
+                    Nuggets - 100
+                  </div>
                 </div>
-                <div className="LOSS">
-                  Thunder - 100
-                </div>
-              </div>
-
-              <div className="GAME">
-                <div className="WIN">
-                  Magic - 110
-                </div>
-                <div className="LOSS">
-                  Nuggets - 100
-                </div>
-              </div>
+              </Link>
               <Link to="/games/Celtics/Mavericks">
                 <div className="GAME">
                   <div className="WIN">
@@ -81,6 +94,7 @@ export default props => {
                   </div>
                 </div>
               </Link>
+              <Link to="/games/Warriors/Blazers">
               <div className="GAME">
                 <div className="LOSS">
                   Golden State - 100
@@ -89,6 +103,7 @@ export default props => {
                   Trail Blazers - 110
                 </div>
               </div>
+              </Link>
 
               
 
@@ -96,68 +111,82 @@ export default props => {
 
             <div className="games2">
 
-              <div className="GAME">
-                <div className="WIN">
-                  Bulls - 110
+            <Link to="/games/Bulls/Wizards">
+                <div className="GAME">
+                  <div className="WIN">
+                    Bulls - 110
+                  </div>
+                  <div className="LOSS">
+                    Wizards - 100
+                  </div>
                 </div>
-                <div className="LOSS">
-                  Wizards - 100
-                </div>
-              </div>
+              </Link>
 
-              <div className="GAME">            
-                <div className="WIN">
-                  Hornets - 110
-                </div>          
-                <div className="LOSS">
-                  Cavaliers - 100
+              <Link to="/games/Hornets/Cavaliers">
+                <div className="GAME">            
+                  <div className="WIN">
+                    Hornets - 110
+                  </div>          
+                  <div className="LOSS">
+                    Cavaliers - 100
+                  </div>
                 </div>
-              </div>
+              </Link>
 
-              <div className="GAME">            
-                <div className="WIN">
-                  Heat - 110
-                </div>          
-                <div className="LOSS">
-                  76ers - 100
+              <Link to="/games/Heat/Sixers">
+                <div className="GAME">            
+                  <div className="WIN">
+                    Heat - 110
+                  </div>          
+                  <div className="LOSS">
+                    76ers - 100
+                  </div>
                 </div>
-              </div>
+              </Link>
 
-              <div className="GAME">
-                <div className="WIN">
-                  Raptors - 110
+              <Link to="/games/Raptors/Pistons">
+                <div className="GAME">
+                  <div className="WIN">
+                    Raptors - 110
+                  </div>
+                  <div className="LOSS">
+                    Pistons - 100
+                  </div>
                 </div>
-                <div className="LOSS">
-                  Pistons - 100
-                </div>
-              </div>
+              </Link>
 
-              <div className="GAME">
-                <div className="WIN">
-                  Pelicans - 110
+              <Link to="/games/Pelicans/Timberwolves">
+                <div className="GAME">
+                  <div className="WIN">
+                    Pelicans - 110
+                  </div>
+                  <div className="LOSS">
+                    Timberwolves - 100
+                  </div>
                 </div>
-                <div className="LOSS">
-                  Timberwolves - 100
-                </div>
-              </div>
+              </Link>
 
-              <div className="GAME">
-                <div className="WIN">
-                  Grizzlies - 110
+              <Link to="/games/Grizzlies/Thunder">
+                <div className="GAME">
+                  <div className="LOSS">
+                    Grizzlies - 100
+                  </div>
+                  <div className="WIN">
+                    Thunder - 110
+                  </div>
                 </div>
-                <div className="LOSS">
-                  Thunder - 100
-                </div>
-              </div>
+              </Link>
 
-              <div className="GAME">
-                <div className="WIN">
-                  Magic - 110
+              <Link to="/games/Magic/Nuggets">
+                <div className="GAME">
+                  <div className="WIN">
+                    Magic - 110
+                  </div>
+                  <div className="LOSS">
+                    Nuggets - 100
+                  </div>
                 </div>
-                <div className="LOSS">
-                  Nuggets - 100
-                </div>
-              </div>
+              </Link>
               <Link to="/games/Celtics/Mavericks">
                 <div className="GAME">
                   <div className="WIN">
@@ -168,6 +197,7 @@ export default props => {
                   </div>
                 </div>
               </Link>
+              <Link to="/games/Warriors/Blazers">
               <div className="GAME">
                 <div className="LOSS">
                   Golden State - 100
@@ -176,7 +206,7 @@ export default props => {
                   Trail Blazers - 110
                 </div>
               </div>
-
+              </Link>
               
 
             </div> {/* games */}
