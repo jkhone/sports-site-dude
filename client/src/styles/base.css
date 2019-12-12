@@ -26,14 +26,16 @@ code {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none !important;
   color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
 }
 /* HEADER */
 header{
   background: white;
-  /* position: fixed; */
-  /* top: -79px; */
   display: flex;
   justify-content: space-between;
 }
@@ -52,6 +54,8 @@ header{
   margin: 5px 15px;
   font-size: 23px;
   padding: 1px 0px;
+  color: #888;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 .header-item:hover{
@@ -62,6 +66,10 @@ header{
 .logo{
   height: 65px;
   margin: 5px 15px;
+}
+
+.navrightside {
+  margin-right: 10px;
 }
 
 .searchBAR{

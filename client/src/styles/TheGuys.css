@@ -3,6 +3,7 @@
     width: 98%;
     filter: grayscale();
     transition: filter 500ms;
+    margin: 4px 0;
 }
 
 .galleryImg:hover{

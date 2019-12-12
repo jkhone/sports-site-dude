@@ -43,8 +43,8 @@ export default props => {
                     </div>
                 </Link>
             ))}
-            <Pagination postsPerPage={postsPerPage} totalPosts={shoes.length} paginate={paginate} />
         </div>
+        <Pagination postsPerPage={postsPerPage} totalPosts={shoes.length} paginate={paginate} />
         </>
     )
 }

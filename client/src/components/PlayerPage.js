@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import "../styles/PlayersPage.css"
 import PlayerSocials from "./PlayerSocials"
 // import { useShoes } from "../hooks"
-
+import Image from 'react-bootstrap/Image'
 
 export default props => {
     const [player, setPlayer] = useState([])
@@ -29,32 +29,28 @@ export default props => {
         <div>
             <div className='playerprofile'>
                 <div className="productleft">
-                    <img src={player.url} alt=''/>
+                    <Image src={player.url} alt='' fluid id="playerpic"/>
                 </div>
-                <div>
-                <PlayerSocials/>
-                </div>
-
                 <div className="section2">
-                    <div className="playerDesc"> 
-                        <div className="TeamName">
-                            {player.team}
-                        </div>
-                        <div className="PlayerName">
-                            {player.player}
-                        </div>
+                    <div className="TeamName">
+                        {player.team}
                     </div>
-                    {/* {shoes.map((shoe, i) => ( */}
-                    <Link className="productright" to={"/product/" + shoe.id} key={'shoe'}>
-                        <img className="shoePic" src={`${shoe.pic}`} alt="" />
-                        <div className="brand">{shoe.brand}</div>
-                        <div className="name">{shoe.shoe}</div>
-                        {/* <div className="size">Size {shoe.size}</div> */}
-                        <div className="ShoePrice">${shoe.price}</div>
-                    </Link>
-                {/* ))} */}
+                    <div className="PlayerName">
+                        {player.player}
+                    </div>
+                    <PlayerSocials/>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 </div>
-
+            </div>
+            <div className="playershoes" >
+                <h2>Shoes worn by {player.player} </h2>
+                <Link className="productright" to={"/product/" + shoe.id} key={'shoe'}>
+                    <Image className="shoePic" src={`${shoe.pic}`} alt="" fluid />
+                    <div className="brand">{shoe.brand}</div>
+                    <div className="name">{shoe.shoe}</div>
+                    <div className="ShoePrice">${shoe.price}</div>
+                </Link>
             </div>
         </div>
     )
