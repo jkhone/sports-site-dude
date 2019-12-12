@@ -259,19 +259,11 @@ export default props => {
                 <div className="footer-title">
                   Socials
                 </div>
-                <div className="social-icon">
-                  <Icon icon="twitter" />
-                </div>
-                <div className="social-icon">
-                  <Icon icon="instagram" />
-                </div>
-                <div className="social-icon">
-                  <Icon icon="facebook" />
+                <div className="socialmedia">
+                  < Social/>
                 </div>
               </div>
-              <div className="socialmedia">
-                < Social/>
-              </div>
+              
           </div>
         </footer>
     )
