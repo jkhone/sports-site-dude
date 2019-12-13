@@ -6,6 +6,7 @@ import Popup from "reactjs-popup";
 import Image from 'react-bootstrap/Image'
 import "../styles/ProductPage.css"
 import Rating from "react-rating"
+import Share from "./ItemShare"
 
 export default props => {
     const [shoe, setShoe] = useState([])
@@ -63,22 +64,27 @@ export default props => {
                         <p>({getRandomInt(100, 1000)})</p>
                     </div>
                     <button className="addToCart" onClick={e => handleAdd(e, shoe)}>Add to Cart</button>
-                    <Popup trigger={<button className="puButton"> Who wears this shoe?</button>} position="right center">
+                    <Popup trigger={<button className="puButton">Who wears this shoe?</button>} position="right center">
                         <div>
                             <Link to={"/player/" + player.id} key={'player'}>
                                 <div className="playerIMG">
                                 </div>
                                 <div className="playerSec">
                                     <div className="playerDesc"> 
-                                        <div className="brand">
+                                        <div className="brandPU">
                                             {player.team}
                                         </div>
-                                        <div className="name">
+                                        <div className="namePU">
                                             {player.player}
                                         </div>
                                     </div>
                                 </div>
                             </Link>
+                        </div>
+                    </Popup>
+                    <Popup trigger={<button className="puButton">SHARE THIS SHOE</button>} position="right center">
+                        <div>
+                            <Share id={id}/>
                         </div>
                     </Popup>
                 </div>
