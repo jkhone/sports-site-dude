@@ -26,12 +26,22 @@ code {
 }
 
 a {
-  text-decoration: none !important;
+  text-decoration: none;
   color: inherit;
 }
 
 a:hover {
   text-decoration: none;
+}
+
+.link{
+  color: #888;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.link:hover{
+  color: #888;
+  text-decoration: underline;
 }
 
 h2 {
@@ -59,6 +69,8 @@ header{
   font-size: 23px;
   padding: 1px 0px;
   color: #888;
+  border-bottom: white 1px solid;
+  transition: border 300ms, color 300ms;
   font-family: 'Roboto Condensed', sans-serif;
 }
 
@@ -84,10 +96,12 @@ header{
   border: none;
   border-bottom: 1px solid #999;
   padding: 1px 2px;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 .searchBAR::placeholder{
   color: #888;
+  font-family: 'Roboto Condensed', sans-serif;
 } 
 
 /* FOOTER */
@@ -152,6 +166,7 @@ header{
   display: flex;
   border-left: 1px solid #888;
   border-right: 1px solid #888;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 .FINALGAME{
@@ -176,13 +191,15 @@ header{
   padding-bottom: 50px;
   background: #333;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-around;
   padding-top: 5px;
 }
 
 .footerSECTION{
   display: flex;
   flex-direction: column;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #888;
   /* margin: 0px 100px 0px 50px; */
 }
 

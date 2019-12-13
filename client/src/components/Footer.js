@@ -268,9 +268,9 @@ export default props => {
                     About Mint
                   </div>
                   <div>
-                  <Link to={"/thedevs/"}>
-                    Meet The Devs
-                  </Link>
+                    <Link className="link" to={"/thedevs/"}>
+                      Meet The Devs
+                    </Link>
                   </div>
                 </div>
               </div>
