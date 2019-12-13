@@ -71,7 +71,7 @@ router.get("/players/:id", (request, response, next) => {
 
     const id = request.params.id
     const sql = `
-    SELECT id, player, team, url
+    SELECT id, player, team, url, instagram, facebook, twitter, youtube, bio
     FROM players
     WHERE id = ?
     `

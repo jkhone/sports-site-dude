@@ -29,7 +29,18 @@
     font-weight: lighter;
 }
 
+.brandPU {    color: #00FFDA;
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: lighter;
+}
+
 .name{
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.namePU{ color: #00FFDA;
     font-size: 20px;
     text-transform: uppercase;
 }

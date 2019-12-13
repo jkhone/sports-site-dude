@@ -44,17 +44,17 @@ export default props => {
                     <div className="size">Size {shoe.size}</div>
                     <div className="ShoePrice">${shoe.price}</div>
                     <button className="addToCart" onClick={e => handleAdd(e, shoe)}>Add to Cart</button>
-                    <Popup trigger={<button className="puButton"> Who wears this shoe?</button>} position="right center">
+                    <Popup trigger={<button className="puButton">Who wears this shoe?</button>} position="right center">
                         <div>
                             <Link to={"/player/" + player.id} key={'player'}>
                                 <div className="playerIMG">
                                 </div>
                                 <div className="playerSec">
                                     <div className="playerDesc"> 
-                                        <div className="brand">
+                                        <div className="brandPU">
                                             {player.team}
                                         </div>
-                                        <div className="name">
+                                        <div className="namePU">
                                             {player.player}
                                         </div>
                                     </div>
