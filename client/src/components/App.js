@@ -1,5 +1,5 @@
 import React from "react"
-import { BrowserRouter as Router, Route} from "react-router-dom"
+import { BrowserRouter as Router, Route, Switch} from "react-router-dom"
 import ShoesPage from './ShoesPage'
 import ProductPage from "./ProductPage"
 import Players from './Players'
@@ -21,7 +21,7 @@ import SocialLinks from "./MintSocial"
 import ShareIcons from "./PlayerSocials"
 import Profile from "./Profile"
 import { useAuth } from "../hooks"
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 function App() {
@@ -30,18 +30,20 @@ function App() {
   return (
 
     <Router>
-      <Header />
-      <Route exact path="/" component={Main} />
-      <Route path="/MVPs" component={TheGuys}/>
       <div className="container">
+        <Header />
+        <Switch>
+          <Route exact path="/" component={Main} />
           <Route path="/stripe" component={Stripe}/>
           <Route exact path="/form" component={Form} />
-          <Route path="/shoes" component={ShoesPage} />
-          <Route path="/shoes/:brandId" component={BrandPage} />
+          <Route exact path="/shoes" component={ShoesPage} />
+          <Route exact path="/shoes/:size" component={ShoesPage} />
+          <Route exact path="/shoes/:brandId" component={BrandPage} /> 
           <Route path="/product/:id" component={ProductPage} />
-          <Route path="/players" component={Players} />
+          <Route exact path="/players" component={Players} />
+          <Route path="/players/:team" component={Players} />
           <Route path="/player/:id" component={PlayerPage} />
-          <Route path="/players/:team" component={TeamPage} />
+          <Route path="/MVPs" component={TheGuys}/>
           <Route path="/thedevs" component={Dev}/>
           <Route path='/login' component={Login} />
           <Route path='/register' component={Register} />
@@ -52,9 +54,10 @@ function App() {
           {isAuthenticated ? 
             <Route path="/profiles/:username" component={Profile} /> : ""
           }
-          
+        </Switch>
+        <Footer/>    
+
       </div>
-      <Footer/> 
     </Router>
   )
 }
