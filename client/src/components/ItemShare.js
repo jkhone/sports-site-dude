@@ -1,5 +1,5 @@
 import React from 'react' 
-import {AwesomeButton, AwesomeButtonSocial } from "react-awesome-button";
+import {AwesomeButtonSocial } from "react-awesome-button";
 import 'react-awesome-button/dist/themes/theme-blue.css';
 
 export default props => {
