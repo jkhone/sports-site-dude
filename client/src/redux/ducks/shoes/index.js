@@ -33,6 +33,7 @@ export default function reducer(state = initialState, action) {
 export function showShoes() {
   return dispatch => {
     Axios.get("api/shoes").then(resp => {
+      console.log('data', resp.data)
       dispatch({
         type: LIST_SHOES,
         payload: resp.data

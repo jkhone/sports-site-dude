@@ -22,12 +22,13 @@ export default props => {
     const indexOfLastPost = currentPage * postsPerPage
     const indexOfFirstPost = indexOfLastPost - postsPerPage
     const currentPosts = shoes.slice(indexOfFirstPost, indexOfLastPost)
-
+    console.log(shoes)
     // Change page
     const paginate = (pageNumber) => setCurrentPage(pageNumber)
 
     return (
         <>
+        
         {/* <div><ProductFilter/></div> */}
         <div><ShoeSearch /></div>
         <div><ShoeSize /></div>
