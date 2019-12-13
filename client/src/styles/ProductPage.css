@@ -91,3 +91,16 @@ div.popup-content {	color: #00FFDA;
 	background: #333 !important;
 
 }
+
+.ratings {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.ratings p {
+    margin: 0;
+    margin-bottom: 3px;
+}
