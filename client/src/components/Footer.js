@@ -269,7 +269,7 @@ export default props => {
                   </div>
                   <div>
                     <Link className="link" to={"/thedevs/"}>
-                      Meet The Devs
+                      <p className="thedevs"> Meet The Devs</p>
                     </Link>
                   </div>
                 </div>
