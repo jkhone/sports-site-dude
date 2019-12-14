@@ -4,7 +4,7 @@ import "../styles/base.css"
 import "../styles/Filter.css"
 
 const ShoeSearch = props => {
-    const { shoes, shoesearch } = useShoes()
+    const { shoesearch } = useShoes()
     const [search, setSearch] = useState('')
 
     function handleSubmit(e) {

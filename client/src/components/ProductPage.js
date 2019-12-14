@@ -3,7 +3,6 @@ import axios from 'axios'
 import { useCart } from "../hooks"
 import { Link } from 'react-router-dom'
 import Popup from "reactjs-popup";
-import Image from 'react-bootstrap/Image'
 import "../styles/ProductPage.css"
 import Rating from "react-rating"
 import Share from "./ItemShare"

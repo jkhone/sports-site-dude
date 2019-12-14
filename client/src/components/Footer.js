@@ -1,11 +1,7 @@
 import React from "react"
 import { Link } from 'react-router-dom'
-import Icon from "../lib/Icon"
 import Social from "./MintSocial"
 import Newsletter from "./Newsletter"
-import Popup from "reactjs-popup";
-
-
 
 export default props => {
     return (
