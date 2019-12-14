@@ -10,9 +10,7 @@ const ShoeSize = props => {
 
     console.log(size)
 
- useEffect(() =>{
-    // console.log(size)
-    
+ useEffect(() =>{    
     getSize(size)
 
 }, [size])

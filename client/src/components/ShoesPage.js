@@ -3,7 +3,6 @@ import { useShoes } from "../hooks"
 import "../styles/ShoesPage.css"
 import "../styles/Players.css"
 import { Link } from 'react-router-dom'
-import ProductFilter from "./ShoesPageFilter"
 import ShoeSearch from "./ShoeSearch"
 import ShoeSize from "./ShoeSizeFilter"
 import Pagination from "./Pagination"
@@ -29,7 +28,6 @@ export default props => {
     return (
         <>
         
-        {/* <div><ProductFilter/></div> */}
         <div><ShoeSearch /></div>
         <div><ShoeSize /></div>
         

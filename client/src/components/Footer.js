@@ -1,11 +1,7 @@
 import React from "react"
 import { Link } from 'react-router-dom'
-import Icon from "../lib/Icon"
 import Social from "./MintSocial"
 import Newsletter from "./Newsletter"
-import Popup from "reactjs-popup";
-
-
 
 export default props => {
     return (
@@ -269,7 +265,7 @@ export default props => {
                   </div>
                   <div>
                     <Link className="link" to={"/thedevs/"}>
-                      Meet The Devs
+                      <p className="thedevs"> Meet The Devs</p>
                     </Link>
                   </div>
                 </div>
