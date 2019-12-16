@@ -1,11 +1,18 @@
 /* ShoesPageFilter */
 
-/* .brandfiltercontainer {
+.brandfiltercontainer {
+	font-family: 'Roboto Condensed', sans-serif;
 	width: 1089px;
 	margin: auto;
-} */
+	outline: none;
+}
 
+select{
+	outline: none;
+	margin-left: 5px;
+}
 .brandfilter img {
+
 	width: 45px;
 	/* border: 1px solid #00FFDA; */
   margin: 0px 5px;
@@ -17,5 +24,6 @@
 	justify-content: flex-start;
 	width: 100%;
 	align-items: center;
+	outline: none;
 	/* margin: auto; */
 }
