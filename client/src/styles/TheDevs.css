@@ -1,4 +1,25 @@
-.devImg {width: 150px;
-height: 150px;
-border-radius: 50%;
-object-fit: cover;}
+.devImg {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.dev {
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    background: rgb(242, 242, 242);
+}
+
+.part1dev {
+    text-align: center;
+    text-decoration: underline;
+}
+
+.part2dev a {
+    margin: 10px;
+}
