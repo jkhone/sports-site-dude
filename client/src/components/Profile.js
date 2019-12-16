@@ -22,7 +22,7 @@ firebase.analytics()
 export default props => {
     const { username } = useAuth()
     const [pic, setPic] = useState()
-    const [fileName, setFileName] = useState('')
+    const [setFileName] = useState('')
     const [isUploading, setIsUploading] = useState(false)
 
     function handleUploadStart(filename) {
