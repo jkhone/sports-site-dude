@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { usePlayers } from "../hooks"
 import { Link } from 'react-router-dom'
 import '../styles/Players.css'
+import '../styles/Filter.css'
 import PlayerSearch from "./PlayerSearch"
 import Pagination from "./Pagination"
 
@@ -37,7 +38,7 @@ export default props => {
   return (
     <>
       <div><PlayerSearch /></div>
-
+      <div className="brandfiltercontainer">
       <label htmlFor="team">Choose a team:</label>
       <select name="team" id="size" onChange={handleChange}>
           <option value="Hawks"> Atlanta Hawks </option>
@@ -70,6 +71,7 @@ export default props => {
           <option value="Jazz">Utah Jazz</option>
           <option value="Wizards">Washington Wizards</option>
       </select>
+      </div>
     
       <div id="playercontainer">
         {currentPosts.map((players, i) => (

@@ -19,6 +19,7 @@ import Games from './Games'
 import SocialLinks from "./MintSocial"
 import ShareIcons from "./PlayerSocials"
 import Profile from "./Profile"
+import CartPage from "./CartPage"
 import { useAuth } from "../hooks"
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -49,6 +50,7 @@ function App() {
           <Route path="/games/:team1/:team2" component={Games}/>
           <Route path='/social' component={SocialLinks} />
           <Route path='/test' component={ShareIcons}/>
+          <Route path='/cart' component={CartPage}/>
 
           {isAuthenticated ? 
             <Route path="/profiles/:username" component={Profile} /> : ""

@@ -48,6 +48,29 @@ h2 {
   font-family: 'Roboto Condensed', sans-serif;
 }
 /* HEADER */
+@media screen and (min-width: 990px) {
+  #cartHeader{display: none;}
+}
+
+#cartHeader{
+  margin: 5px 15px;
+  font-size: 23px;
+  padding: 1px 0px;
+  color: #888;
+  border-bottom: white 1px solid;
+  transition: border 300ms, color 300ms;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.navbar-toggler{
+  outline: none !important;
+}
+
+#cartHeader:hover{
+  border-bottom: #333 1px solid;
+  color: #333;
+}
+
 header{
   background: white;
   display: flex;
@@ -62,6 +85,7 @@ header{
 .header-right{
   display: flex;
   align-items: center;
+  margin-right: 100px;
 }
 
 .header-item{
@@ -85,7 +109,7 @@ header{
 }
 
 .navrightside {
-  margin-right: 10px;
+  margin-right: 15px;
 }
 
 .searchBAR{

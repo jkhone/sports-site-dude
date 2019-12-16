@@ -1,3 +1,8 @@
+@media screen and (max-width: 990px) {
+  .cart .toggle {display: none;}
+  .cart{width: 100vh;}
+}
+
 .cart {
   position: fixed;
   width: 450px;
@@ -20,13 +25,14 @@
   color: #888;
   background: transparent;
   top: 0;
-  left: -50px;
-  line-height: 80px;
+  left: -55px;
+  line-height: 85px;
   text-align: center;
   font-size: 23px;
   cursor: pointer;
   border-right: #333 1px solid;
 }
+
 
 .cart.open {
   right: 0;
