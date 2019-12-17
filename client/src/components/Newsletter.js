@@ -2,9 +2,6 @@ import React from 'react'
 import Popup from "reactjs-popup";
 import "../styles/Newsletter.css"
 
-
-
-
 export default props => {
 return (
 <div className="newslettercontainer">

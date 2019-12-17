@@ -21,6 +21,7 @@ import ShareIcons from "./PlayerSocials"
 import Profile from "./Profile"
 import CartPage from "./CartPage"
 import { useAuth } from "../hooks"
+import Contact from "./ContactUs"
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -51,6 +52,7 @@ function App() {
           <Route path='/social' component={SocialLinks} />
           <Route path='/test' component={ShareIcons}/>
           <Route path='/cart' component={CartPage}/>
+          <Route path='/contact' component={Contact}/>
 
           {isAuthenticated ? 
             <Route path="/profiles/:username" component={Profile} /> : ""

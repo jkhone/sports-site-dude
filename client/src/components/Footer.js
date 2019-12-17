@@ -2,6 +2,8 @@ import React from "react"
 import { Link } from 'react-router-dom'
 import Social from "./MintSocial"
 import Newsletter from "./Newsletter"
+import Popup from "reactjs-popup";
+import Contact from "./ContactUs"
 
 export default props => {
     return (
@@ -229,9 +231,12 @@ export default props => {
                   <div>
                     Terms
                   </div>
-                  <div>
-                    Contact Info
-                  </div>
+                  <Popup trigger={<button className="puButtonFooter"> Contact Us </button>}
+                  modal
+                  closeOnDocumentClick
+                  >
+                <Contact/>
+                </Popup>                  
                 </div>
               </div>
 
