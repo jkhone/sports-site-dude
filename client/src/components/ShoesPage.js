@@ -27,10 +27,10 @@ export default props => {
 
     return (
         <>
-        
-        <div><ShoeSearch /></div>
-        <div><ShoeSize /></div>
-        
+        <div className="searchbar">
+        <div className="shoesearch" ><ShoeSearch /></div>
+        <div className="shoesize"><ShoeSize /></div>
+        </div>
         <div id="playercontainer">
             {currentPosts.map((shoe, i) => (
                 <Link to={"/product/" + shoe.id} key={'shoe' + i}>

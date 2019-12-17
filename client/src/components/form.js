@@ -38,7 +38,7 @@ Axios.post('/api/shoes', {playerId, brand, shoe, size, color, pic, price}).then(
     <>
       <div>
           <h1>Shoes</h1>
-          <form class="form" onSubmit={handleSubmit}>
+          <form class="dbform" onSubmit={handleSubmit}>
                   <input type="text" placeholder="PlayerID" onChange={e => setPlayerId(e.target.value)}></input>
                   <input type="text" placeholder="Brand"onChange={e => setBrand(e.target.value)}></input>
                   <input type="text" placeholder="Shoe Name" onChange={e=> setShoe(e.target.value)}></input>
@@ -53,7 +53,7 @@ Axios.post('/api/shoes', {playerId, brand, shoe, size, color, pic, price}).then(
           
           <div>
               <h1>Players</h1>
-              <form class="form" onSubmit={handleSubmit}>
+              <form class="dbform" onSubmit={handleSubmit}>
                       <input type="text" placeholder="Player" onChange={e => setPlayer(e.target.value)}></input>
                       <input type="text" placeholder="Team"onChange={e => setTeam(e.target.value)}></input>
                       <input type="text" placeholder="url" onChange={e=> setUrl(e.target.value)}></input>

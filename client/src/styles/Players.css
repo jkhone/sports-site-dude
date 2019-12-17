@@ -52,3 +52,22 @@
   display: flex;
   justify-content: center;
 }
+
+.searchbar {display: flex;
+align-items: center;}
+
+.playersearch {width: 50%;}
+
+
+.shoesearch {width: 50%;
+justify-content: flex-start;
+display: flex;}
+.shoesize {width: 50%;
+justify-content: flex-end;
+display: flex;}
+
+div.brandfiltercontainer {width: 50%;
+margin: 0;}
+
+div.brandfiltercontainer label {margin: 0;
+font-size: 20px;}
