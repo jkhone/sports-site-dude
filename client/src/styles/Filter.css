@@ -27,3 +27,5 @@ select{
 	outline: none;
 	/* margin: auto; */
 }
+div.brandfiltercontainer {display: flex;
+justify-content: flex-end;}

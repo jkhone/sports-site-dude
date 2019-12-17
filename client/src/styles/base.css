@@ -270,3 +270,5 @@ span.aws-btn__wrapper:hover {filter: grayscale(0);}
 .thedevs:hover{
   text-decoration: underline;
 }
+
+.page-link {color: #00FFDA !important}

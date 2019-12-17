@@ -21,6 +21,7 @@ return(
 
         <label for="sizes">Choose a size:</label>
         <select name="size" id="size" onChange={e=>setSize(e.target.value)}>
+            <option value="7">7</option>
             <option value="8">8</option>
             <option value="9">9</option>
             <option value="10">10</option>
@@ -30,6 +31,7 @@ return(
             <option value="14">14</option>
             <option value="15">15</option>
             <option value="16">16</option>
+            <option value="17">17</option>
         </select>
 
     </div>   
