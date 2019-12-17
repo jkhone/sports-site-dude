@@ -39,6 +39,7 @@ export default props => {
                         <div className="playerDesc">
                             <div className="teamName">{shoe.brand}</div>
                             <div className="playerName">{shoe.shoe}</div>   
+                            <div className="playerName">Size {shoe.size}</div>  
                             <div className="shoePrice">${shoe.price}</div>
                         </div>
                     </div>

@@ -29,7 +29,7 @@ export function Stripe () {
             token={handleToken}
             name="MINT"
             description='"The Future is MINT"'
-            amount={total * 100}
+            amount={total * 100 + (total * 100 * .08)}
             bitcoin
             alipay
             billingAddress

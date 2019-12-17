@@ -27,7 +27,7 @@ export default props => {
             </AwesomeButtonSocial>
             <AwesomeButtonSocial
                   type="youtube"
-                  href={`${props.youtube}`}                   
+                  href={`https://www.youtube.com/results?search_query=${props.youtube}`}                   
                   target="_blank"
                   size="icon">
             </AwesomeButtonSocial>

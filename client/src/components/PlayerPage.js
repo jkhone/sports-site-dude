@@ -26,10 +26,13 @@ export default props => {
     return (
         <div>
             <div className='playerprofile'>
-                <div className="productleft">
+                <div className="productleftplayer">
                     <Image src={player.url} alt='' fluid id="playerpic"/>
                 </div>
                 <div className="section2">
+                    <div className="PlayerName" >
+                        {player.player}
+                    </div>
                     <div className="TeamName">
                         {player.team}
                     </div>
@@ -37,7 +40,7 @@ export default props => {
                     twitter={player.twitter} 
                     facebook={player.facebook} 
                     instagram={player.instagram} 
-                    youtube={player.youtube}/>
+                    youtube={player.player}/>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 </div>

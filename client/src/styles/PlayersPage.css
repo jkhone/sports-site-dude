@@ -4,9 +4,9 @@
     display: flex;
 	align-items: center;
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: space-between;
 }
-.productleft {
+.productleftplayer {
     height: 98%;
 }
 .section2{
@@ -73,6 +73,6 @@
 
 .playershoes {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
-
+	grid-template-columns: 1fr 1fr 1fr;
+    
 }
