@@ -100,8 +100,50 @@ font-size: 22px;}
 
 .label-email {margin-bottom: 0;}
 
+.formcomments { text-align: left;
+   }
 
+.label-comments {color: red;
+margin-top: 10px;
+margin-bottom: 0;}
 
+.content-comments {color:#00FFDA;}
 
+.commentInput {margin-top: 0;
+outline: none;}
 
-  
+.puButtonHome3 {    
+   background:none;
+   font-size: 20px;
+   text-transform: uppercase;
+   font-family: "Roboto Condensed", sans-serif;
+   font-weight: lighter;
+   color: #888;
+   cursor: pointer;
+   width: 80%;
+   border: 1px solid #888;
+   outline: none !important;
+   margin-top: 10px;
+   margin-bottom: 10px;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.puButtonHome3:hover {transform: scale(1.025);
+}
+
+.bad {color: red;
+text-align: center;}
+.good {color: green;
+text-align: center;}
+
+.puButtonFooter {border: none;
+background: transparent;
+padding: 0;
+color: #888;
+font-family: 'Roboto Condensed', sans-serif;
+font-weight: lighter;
+outline: none !important;}
+
+.puButtonFooter:hover {text-decoration: underline;}
+
