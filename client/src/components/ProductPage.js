@@ -59,6 +59,7 @@ export default props => {
                         readonly
                         emptySymbol="fa fa-star-o fa-2x"
                         fullSymbol="fa fa-star fa-2x"
+                        className="ratingstars"
                         />
                         <p>({getRandomInt(100, 1000)})</p>
                     </div>

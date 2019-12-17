@@ -9,7 +9,7 @@
 }
 
 .productleft {
-	width: 100%;
+	/* width: 100%; */
 }
 
 .productleft img {
@@ -114,4 +114,8 @@ div.popup-content {	color: #00FFDA;
 .ratings p {
     margin: 0;
     margin-bottom: 3px;
+}
+
+.ratingstars {
+    font-size: 14px;
 }
