@@ -26,7 +26,7 @@ export default props => {
     return (
         <div>
             <div className='playerprofile'>
-                <div className="productleft">
+                <div className="productleftplayer">
                     <Image src={player.url} alt='' fluid id="playerpic"/>
                 </div>
                 <div className="section2">
