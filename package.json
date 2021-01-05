@@ -15,7 +15,7 @@
   },
   "homepage": "https://github.com/PC-Fullstack-Fall-2019/boilerplate#readme",
   "dependencies": {
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "concurrently": "^5.0.0",
     "firebase": "^7.5.2",
     "react": "^16.12.0",
